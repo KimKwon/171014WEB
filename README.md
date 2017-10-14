@@ -5,15 +5,15 @@ WEB Application TEAM PROJECT
 
 ### Members
    + 권혁진 (2016003309)
-      > Developer
+      > Front-End Developer
    + 박현준 (2016003554) 
-      > Developer
+      > Back-End Developer
    + 배성훈 (2016003563) 
-      > Developer
+      > Back-End Developer
    + 윤가영 (2016003709) 
-      > Developer
+      > Front-End Developer
    + 한건희 (2016004002) 
-      > Developer
+      > Back-End Developer
 
       
       
