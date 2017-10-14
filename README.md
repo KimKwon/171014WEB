@@ -5,7 +5,7 @@ WEB Application TEAM PROJECT
 
 ### Members
    + 권혁진 (2016003309)
-      > Front-End Developer
+      > Back-End Developer
    + 박현준 (2016003554) 
       > Back-End Developer
    + 배성훈 (2016003563) 
@@ -13,11 +13,8 @@ WEB Application TEAM PROJECT
    + 윤가영 (2016003709) 
       > Front-End Developer
    + 한건희 (2016004002) 
-      > Back-End Developer
-
-      
-      
-
+      > Front-End Developer
+       
 ### Contents
 1. server time on top (visible / invisible)
 2. reservation for SMASH room
