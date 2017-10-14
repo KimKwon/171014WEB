@@ -12,8 +12,11 @@ WEB Application TEAM PROJECT
       > Developer
    + 윤가영 (2016003709) 
       > Developer
-   + 한건희 (2016004002)
-      > Developer
+   + 한건희 (2016004002) 
+      > Developer
+
+      
+      
 
 ### Contents
 1. server time on top (visible / invisible)
