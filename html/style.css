@@ -174,7 +174,6 @@ section img{
 /*    text-align: center;*/
 }
 .front{
- 
     width: 100%;
     margin-bottom: 100px;
 
@@ -182,10 +181,9 @@ section img{
 .back{
 
     width: 100%;
-    
 
 }
-.all{
+#all{
     padding: 70px;
     text-align: center;
 }
