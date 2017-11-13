@@ -44,11 +44,14 @@
                 <p>For Smash Reservation</p>
                 <!-- <p>If you don't have account, make it right now!</p> -->
 				<div class="logbox">
-                    <input type="text" placeholder="name"/>
-                    <input type="password" placeholder="password"/>
-                    <input type="text" placeholder="email address"/>
+                  <form action="logon.php" method="post">
+                    <input name='u_id' type="text" placeholder="Name"/>
+                    <input name='u_pw' type="password" placeholder="Password"/>
+                    <input name='u_email' type="text" placeholder="E-mail address"/>
                     <button>create</button>
-				</div>
+                  </form>
+        </div>
+
                 <!-- <a href="signin.html"><button class="greenButton">sign up</button></a><br> -->
 
                 <br/>
