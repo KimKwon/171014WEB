@@ -1,0 +1,26 @@
+DATABASE smash_user{
+  user_info
+}
+
+
+table user_info(
+  user_id varchar(30) primary key,
+  user_pw varchar(20) not null,
+  user_email varchar(320) not null
+)
+
+
+1. (Terminal) mysql -uroot -proot
+
+2. create database smash_user;
+
+3. create table user_info(
+    user_id varchar(30) primary key,
+    user_pw varchar(20) not null,
+    user_email varchar(320) not null
+  )
+
+
+4. sign up -> insert value into table user_info
+
+5. sign in -> compare id,pw with value in database
