@@ -36,7 +36,7 @@ nav {
     min-width: 798px;
     text-align: center;
     color: #fff;
-    background-image: url('images/header.jpg');
+    background-image: url('../images/header.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -153,40 +153,3 @@ nav .nav-content .nav-content-inner p {
   background: #FFF none no-repeat right top;
   color: #85C421;
 }
-.role{
-    font-size: 20px;
-    color: yellowgreen;
-}
-section h3{
-    color : #3c3c3c;
-}
-section img{
-    border-radius: 100px;
-    width: 40%;
-}
-.boxing{
-    width: 300px;
-    text-align: center;
-    display: inline-block;
-}
-.boxing h3{
-    font-size: 25px;
-/*    text-align: center;*/
-}
-.front{
-    width: 100%;
-    margin-bottom: 100px;
-
-}
-.back{
-
-    width: 100%;
-
-}
-#all{
-    padding: 70px;
-    text-align: center;
-}
-/*#full{
-    height: 100%;
-}*/
