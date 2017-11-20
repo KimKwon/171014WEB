@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    
+
 
     <header>
         <ul>
@@ -51,13 +51,9 @@
                             if($room_no != 0) {
                                 try {
                                     $DBname = "SMASH";
-<<<<<<< HEAD
+
                                     $query = "select room_date from room where room_no = $room_no;";
                                     $db = new PDO("mysql:dbname=$DBname", "root", "root");
-=======
-                                    $query = "select room_date, room_check from room where room_no = $room_no;";
-                                    $db = new PDO("mysql:dbname=$DBname", "root", "seonghoon");
->>>>>>> 5670ae8190870a32ed870e71e8cbce656cbd35c4
                                     $rows = $db->query($query);
                         ?>
                                     <ul>
