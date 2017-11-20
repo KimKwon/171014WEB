@@ -25,3 +25,5 @@ WEB Application TEAM PROJECT
    - You can get point when you win !
    - Rank System 
    
+### Preview
+![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/index_page.png)
