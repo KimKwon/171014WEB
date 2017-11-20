@@ -3,6 +3,8 @@ WEB Application TEAM PROJECT
 
 ## Team Name: 흔한 대학생들
 
+---------------------------------------
+
 ### Members
 
    + 윤가영 (2016003709) 
@@ -16,6 +18,7 @@ WEB Application TEAM PROJECT
    + 배성훈 (2016003563) 
       > Back-End Developer
 
+---------------------------------------
        
 ### Contents
 1. server time on top (visible / invisible)
@@ -25,6 +28,8 @@ WEB Application TEAM PROJECT
    - You can get point when you win !
    - Rank System 
    
+--------------------------------------- 
+ 
 ### Preview
 
 #### Index Page
