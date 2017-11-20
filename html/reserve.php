@@ -18,7 +18,7 @@
 </head>
 
 <body>
-
+    
 
     <header>
         <ul>
@@ -34,14 +34,14 @@
             <div class="nav-content-inner">
                 <div class="room">
                     <?php
-                        $room_no = $_GET["roomNumber"];
+                        $room_no = $_GET["room_number"];
                         if(!isset($room_no)) {
                             $room_no = 0;
                         }
                     ?>
                     <ul>
                         <?php for($i = 1; $i <= 8; $i++) { ?>
-                            <li><a href="reserve.php?roomNumber=<?= $i ?>">SR#<?= $i ?></a></li>
+                            <li><a href="reserve.php?room_number=<?= $i ?>">SR#<?= $i ?></a></li>
                         <?php } ?>
                     </ul>
                 </div>
@@ -51,13 +51,24 @@
                             if($room_no != 0) {
                                 try {
                                     $DBname = "SMASH";
+<<<<<<< HEAD
                                     $query = "select room_date from room where room_no = $room_no;";
                                     $db = new PDO("mysql:dbname=$DBname", "root", "root");
+=======
+                                    $query = "select room_date, room_check from room where room_no = $room_no;";
+                                    $db = new PDO("mysql:dbname=$DBname", "root", "seonghoon");
+>>>>>>> 5670ae8190870a32ed870e71e8cbce656cbd35c4
                                     $rows = $db->query($query);
                         ?>
                                     <ul>
                                     <?php foreach($rows as $row) { ?>
-                                        <li><?= $row["room_date"] ?></li>
+                                        <li>
+                                            <?php if($row["room_check"] == 'FALSE') { ?>
+                                                <a href="input_reserve.php?room_number=<?= $room_no ?>&date=<?= $row["room_date"] ?>"><?= $row["room_date"] ?></a>
+                                            <?php } else { ?>
+                                                <?= $row["room_date"] ?>
+                                            <?php } ?>
+                                        </li>
                                     <?php } ?>
                                     </ul>
                         <?php
