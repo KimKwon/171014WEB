@@ -11,7 +11,7 @@ create table user_info(
 create table room(
 	room_no integer not null,
 	room_date varchar(20) not null,
-	room_check varchar(10) not null,
+	room_check varchar(10) not null
 );
 alter table room add primary key(room_no, room_date);
 
