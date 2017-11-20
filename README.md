@@ -26,4 +26,4 @@ WEB Application TEAM PROJECT
    - Rank System 
    
 ### Preview
-![alt text](https://github.com/KimKwon/SMASH_ZZIM/preview/index_page.png)
+![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/index_page.png)
