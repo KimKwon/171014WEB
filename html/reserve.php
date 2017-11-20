@@ -52,7 +52,7 @@
                                 try {
                                     $DBname = "SMASH";
                                     $query = "select room_date from room where room_no = $room_no;";
-                                    $db = new PDO("mysql:dbname=$DBname", "root", "seonghoon");
+                                    $db = new PDO("mysql:dbname=$DBname", "root", "root");
                                     $rows = $db->query($query);
                         ?>
                                     <ul>
