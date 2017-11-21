@@ -48,30 +48,28 @@
                 <div class="timetable">
                     <ul>
                         <?php
-                            if($room_no != 0) {
-                                try {
-                                    $DBname = "SMASH";
-
-                                    $query = "select room_date from room where room_no = $room_no;";
-                                    $db = new PDO("mysql:dbname=$DBname", "root", "root");
-                                    $rows = $db->query($query);
+                        if($room_no != 0) {
+                            try {
+                                $query = "SELECT room_date, room_check FROM room WHERE room_no = $room_no;";
+                                $db = new PDO("mysql:dbname=smash", "root", "root");
+                                $rows = $db->query($query);
                         ?>
-                                    <ul>
-                                    <?php foreach($rows as $row) { ?>
-                                        <li>
-                                            <?php if($row["room_check"] == 'FALSE') { ?>
-                                                <a href="input_reserve.php?room_number=<?= $room_no ?>&date=<?= $row["room_date"] ?>"><?= $row["room_date"] ?></a>
-                                            <?php } else { ?>
-                                                <?= $row["room_date"] ?>
-                                            <?php } ?>
-                                        </li>
-                                    <?php } ?>
-                                    </ul>
+                                <ul>
+                                <?php foreach($rows as $row) { ?>
+                                    <li>
+                                        <?php if($row["room_check"] == 'FALSE') { ?>
+                                            <a href="get_reservation_info.php?room_number=<?= $room_no ?>&date=<?= $row["room_date"] ?>"><?= $row["room_date"] ?></a>
+                                        <?php } else { ?>
+                                            <?= $row["room_date"] ?>
+                                        <?php } ?>
+                                    </li>
+                                <?php } ?>
+                                </ul>
                         <?php
-                                } catch (PDOException $e) {
-                                    echo "fail";
-                                }
+                            } catch (PDOException $e) {
+                                echo "fail";
                             }
+                        }
                         ?>
                     </ul>
                 </div>

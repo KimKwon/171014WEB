@@ -23,6 +23,7 @@
     <header>
         <ul>
             <a href="index.html">Ordinary Colleage Students</a>
+            <li><a href="reserve.php">Reservation</a></li>
             <li><a href="contactus.html">Contact us</a></li>
             <!-- <li><a href="aboutus.html">About us</a></li> -->
             <li class="dropdown">
@@ -39,37 +40,29 @@
         <div class="nav-content">
             <div class="nav-content-inner">
                 <div class="info">
-                  <?php
-                  if($_GET['logged']==true){
-                    $DBname = "SMASH";
-                    $a = $_GET['id'];
-                    $query = "SELECT * FROM reservation WHERE id='$a'";
-                    $db = new PDO("mysql:dbname=$DBname", "root", "root");
-                    $rows = $db->query($query);
-                    foreach ($rows as $row) {
-                      $date = $row["reserve_date"];
-                      $room_no = $row["reserve_room_no"];
-                      $teammate = $row["population"];
-                      $purpose = $row["purpose"];
+                    <?php
+                    if($_COOKIE["id"]) {
+                        $user_id = $_COOKIE["id"];
+                        $query = "SELECT * FROM reservation WHERE id='$user_id'";
+                        $db = new PDO("mysql:dbname=smash", "root", "root");
+                        $rows = $db->query($query);
+                        foreach ($rows as $row) {
+                            $date = $row["reserve_date"];
+                            $room_no = $row["reserve_room_no"];
+                            $teammate = $row["population"];
+                            $purpose = $row["purpose"];
+                        }
+                    } else {
+                        echo("<script>location.replace('index.html');</script>");
                     }
-
-
-                  }
-                  else{
-                    echo("<script>location.replace('index.html');</script>");
-                  }
-
-                   ?>
-                  <h1>  <?= $a ?> </h1>
-                  <p>
-                    예약한 방 : <?= $room_no ?>
-                    <br><br>
-                    예약 시간 : <?= $date ?>
-                    <br><br>
-                    활용 목적 : <?= $purpose ?>
-                    <br><br>
-                    사용 인원 : <?= $teammate ?>
-                  </p>
+                    ?>
+                    <h1> <?= $user_id ?> </h1>
+                    <ul>
+                        <li>예약한 방 : <?= $room_no ?></li>
+                        <li>예약 시간 : <?= $date ?></li>
+                        <li>활용 목적 : <?= $purpose ?></li>
+                        <li>사용 인원 : <?= $teammate ?></li>
+                    </ul>
                 </div>
             </div>
         </div>
