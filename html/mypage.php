@@ -46,23 +46,23 @@
                         $query = "SELECT * FROM reservation WHERE id='$user_id'";
                         $db = new PDO("mysql:dbname=smash", "root", "root");
                         $rows = $db->query($query);
-                        foreach ($rows as $row) {
-                            $date = $row["reserve_date"];
-                            $room_no = $row["reserve_room_no"];
-                            $teammate = $row["population"];
-                            $purpose = $row["purpose"];
+                    ?>
+                        <h1><?= $user_id ?></h1>
+                        <table>
+                            <tr><td>Room number</td><td>Time</td><td>Purpose</td><td>Population</td>
+                    <?php
+                            foreach ($rows as $row) {
+                    ?>
+                            <tr><td><?= $row["reserve_room_no"] ?></td><td><?= $row["reserve_date"] ?></td><td><?= $row["purpose"] ?></td><td><?= $row["population"] ?></td>
+                    <?php
                         }
+                    ?>
+                        </table>
+                    <?php
                     } else {
                         echo("<script>location.replace('index.html');</script>");
                     }
                     ?>
-                    <h1> <?= $user_id ?> </h1>
-                    <ul>
-                        <li>예약한 방 : <?= $room_no ?></li>
-                        <li>예약 시간 : <?= $date ?></li>
-                        <li>활용 목적 : <?= $purpose ?></li>
-                        <li>사용 인원 : <?= $teammate ?></li>
-                    </ul>
                 </div>
             </div>
         </div>

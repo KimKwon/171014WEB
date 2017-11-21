@@ -9,12 +9,12 @@
             $db = new PDO("mysql:dbname=smash", "root", "root");
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
-            $query = "update room set room_check='TRUE' where (room_no=$room_no and room_date='$reserve_date');";
+            $query = "UPDATE room SET room_check='TRUE' WHERE (room_no=$room_no AND room_date='$reserve_date');";
             $db->query($query);
             
             $iroom_no = intval($room_no);
             $ipopulation = intval($population);
-            $query = "insert into reservation(id, reserve_date, reserve_room_no, purpose, population) values ('$id', '$reserve_date', $iroom_no, '$purpose', $ipopulation);";
+            $query = "INSERT INTO reservation(id, reserve_date, reserve_room_no, purpose, population) VALUES ('$id', '$reserve_date', $iroom_no, '$purpose', $ipopulation);";
             $db->query($query);
             
             header("Location: reserve.php?room_number=$room_no");
