@@ -47,19 +47,20 @@
                     $db = new PDO("mysql:dbname=$DBname", "root", "root");
                     $rows = $db->query($query);
                     foreach ($rows as $row) {
-                      $user_name = $row["id"];
                       $date = $row["reserve_date"];
                       $room_no = $row["reserve_room_no"];
                       $teammate = $row["population"];
                       $purpose = $row["purpose"];
                     }
+
+
                   }
                   else{
                     echo("<script>location.replace('index.html');</script>");
                   }
 
                    ?>
-                  <h1>  <?= $user_name ?> </h1>
+                  <h1>  <?= $a ?> </h1>
                   <p>
                     예약한 방 : <?= $room_no ?>
                     <br><br>
