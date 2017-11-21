@@ -3,7 +3,8 @@ $id = $_POST["us_id"];
 $pw = $_POST["us_pw"];
 
 try{
-    $db = new PDO("mysql:dbname=smash_user;port=8888;host:localhost","root","root");
+    $DBname = "SMASH";
+    $db = new PDO("mysql:dbname=$DBname;port=8888;host:localhost","root","root");
     $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "connected!\n";
@@ -22,6 +23,7 @@ foreach ($user as $us) {
 if($flag_log){
   echo "login success";
   echo "Welcome, $id";
+  echo("<script>location.replace('mypage.php?logged=true&id=$id');</script>");
 }
 else{
   echo "fail";

@@ -40,17 +40,24 @@
             <div class="nav-content-inner">
                 <div class="info">
                   <?php
-                  $DBname = "SMASH";
-                  $query = "SELECT * FROM reservation WHERE id='A'";
-                  $db = new PDO("mysql:dbname=$DBname", "root", "root");
-                  $rows = $db->query($query);
-                  foreach ($rows as $row) {
-                    $user_name = $row["id"];
-                    $date = $row["reserve_date"];
-                    $room_no = $row["reserve_room_no"];
-                    $teammate = $row["population"];
-                    $purpose = $row["purpose"];
+                  if($_GET['logged']==true){
+                    $DBname = "SMASH";
+                    $a = $_GET['id'];
+                    $query = "SELECT * FROM reservation WHERE id='$a'";
+                    $db = new PDO("mysql:dbname=$DBname", "root", "root");
+                    $rows = $db->query($query);
+                    foreach ($rows as $row) {
+                      $user_name = $row["id"];
+                      $date = $row["reserve_date"];
+                      $room_no = $row["reserve_room_no"];
+                      $teammate = $row["population"];
+                      $purpose = $row["purpose"];
+                    }
                   }
+                  else{
+                    echo("<script>location.replace('index.html');</script>");
+                  }
+
                    ?>
                   <h1>  <?= $user_name ?> </h1>
                   <p>
