@@ -1,27 +1,50 @@
-.nav-content-inner {
-	height: 100%;
-	text-align: justify;
+.room{
+    width: 40%;
+/*    margin-left: 5%;*/
+    margin-right: 5%;
+    float: left;
+    
+    
 }
 
-.nav-content-inner .room {
-	width: 30%;
-	border: 2px solid red;
-	display: inline-block;
-	margin-left: 5%;
-	margin-right:10%;
-}
-.nav-content-inner .room li{
-	font: 15px;
-	/*height: 100px;*/
-}
-.nav-content-inner .timetable{
-	border: 2px solid blue;
-	display: inline-block;
+.timetable{
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    float: left;
 }
 
-.rnum{
-	border: solid 5px green;
-	margin: 5px;
-	padding: 15px;
-	display: inline-block;
+.nav-content-inner ul{
+    list-style: none;
+    width: 100%;
+}
+
+
+.broom, .sroom{
+    width: 45%;
+    float: left;
+    margin-left: 5%
+}
+
+.rnum {
+    width: 70%;
+}
+
+button{
+    border: 2px solid black ;
+    width: 70%;
+    padding-top: 28%;
+    padding: auto;
+}
+
+.broom .rnum {
+    margin-bottom: 20%;
+}
+
+.broom .froom {
+    margin-bottom: 60%;
+}
+
+.sroom .rnum{
+    margin-top: 25%;
 }

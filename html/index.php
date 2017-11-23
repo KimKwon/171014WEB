@@ -46,7 +46,18 @@
                     <p>For Smash Reservation</p>
                     <p>If you don't have account, make it right now!</p>
                     <br/>
-                    <a href="signup.html"><button class="greenButton">sign up</button></a>
+
+                    <?php $signed = $_GET["signed"];?>
+                        <?if ($signed != true) {?>
+                            <a href="signup.html"><button class="greenButton">sign up</button></a>
+                        <?}
+                        else {?>
+                            <a href="signin.html"><button class="greenButton">sign in</button></a>
+                        <?}?>
+
+
+
+
                     <br/>
                 </div>
             </div>

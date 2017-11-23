@@ -13,7 +13,7 @@
 			alert("가입이 완료되었습니다 <?=$us_id?> 님!");
 		</script>
 <?php
-		echo("<script>location.replace('index2.html');</script>");
+		echo("<script>location.replace('index.php?signed=true');</script>");
 	} catch(PDOException $e) {
 		echo $e->getMessage();
 	}

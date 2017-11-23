@@ -40,9 +40,20 @@
                         }
                     ?>
                     <ul>
-                        <?php for($i = 1; $i <= 8; $i++) { ?>
-                            <li class="rnum"><a href="reserve.php?room_number=<?= $i ?>">SR#<?= $i ?></a></li>
-                        <?php } ?>
+                        <div class="broom">
+                            <li class="rnum froom"><a href="reserve.php?room_number=1"><button>SR#1</button></a></li>
+                            <li class="rnum"><a href="reserve.php?room_number=2"><button>SR#2</button></a></li>
+                            <li class="rnum"><a href="reserve.php?room_number=3"><button>SR#3</button></a></li>
+                            <li class="rnum"><a href="reserve.php?room_number=4"><button>SR#4</button></a></li>
+                        </div>
+
+                        <div class="sroom">
+                            <li class="rnum"><a href="reserve.php?room_number=5"><button>SR#5</button></a></li>
+                            <li class="rnum"><a href="reserve.php?room_number=6"><button>SR#6</button></a></li>
+                            <li class="rnum"><a href="reserve.php?room_number=7"><button>SR#7</button></a></li>
+                            <li class="rnum"><a href="reserve.php?room_number=8"><button>SR#8</button></a></li>
+                            <li class="rnum"><a href="reserve.php?room_number=9"><button>SR#9</button></a></li>
+                        </div>
                     </ul>
                 </div>
                 <div class="timetable">
