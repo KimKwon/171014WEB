@@ -13,7 +13,7 @@
 
     <link href="css/layout.css" rel="stylesheet">
 
-    <link href="css/book.css" rel="stylesheet">
+    <link href="css/reserve.css" rel="stylesheet">
 
 </head>
 
@@ -41,7 +41,7 @@
                     ?>
                     <ul>
                         <?php for($i = 1; $i <= 8; $i++) { ?>
-                            <li><a href="reserve.php?room_number=<?= $i ?>">SR#<?= $i ?></a></li>
+                            <li class="rnum"><a href="reserve.php?room_number=<?= $i ?>">SR#<?= $i ?></a></li>
                         <?php } ?>
                     </ul>
                 </div>
