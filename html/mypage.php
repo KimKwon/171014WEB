@@ -22,7 +22,7 @@
 
     <header>
         <ul>
-            <a href="index.html">Ordinary Colleage Students</a>
+            <a href="index.php">Ordinary Colleage Students</a>
             <li><a href="reserve.php">Reservation</a></li>
             <li><a href="contactus.html">Contact us</a></li>
             <!-- <li><a href="aboutus.html">About us</a></li> -->

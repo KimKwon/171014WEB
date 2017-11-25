@@ -22,7 +22,7 @@
 
     <header>
         <ul>
-            <a href="index.html">Ordinary Colleage Students</a>
+            <a href="index.php">Ordinary Colleage Students</a>
             <li><a href="contactus.html">Contact us</a></li>
             <!-- <li><a href="aboutus.html">About us</a></li> -->
             <li>Booking</li>
@@ -57,6 +57,7 @@
                     </ul>
                 </div>
                 <div class="timetable">
+<!--
                     <ul>
                         <?php
                         if($room_no != 0) {
@@ -83,6 +84,21 @@
                         }
                         ?>
                     </ul>
+-->
+                    
+                    <table>
+                        
+                        <tr>
+                            <th>TIME</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>TIME</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                        
+                        
+                        
+                    </table>
                 </div>
             </div>
         </div>

@@ -1,50 +1,79 @@
-.room{
-    width: 40%;
-/*    margin-left: 5%;*/
-    margin-right: 5%;
-    float: left;
-    
-    
-}
-
-.timetable{
-    width: 40%;
-    margin-left: 5%;
-    margin-right: 5%;
-    float: left;
-}
-
 .nav-content-inner ul{
     list-style: none;
     width: 100%;
 }
 
-
-.broom, .sroom{
-    width: 45%;
-    float: left;
-    margin-left: 5%
+.nav-content-inner{
+    padding-right: 2.5%;
+    padding-left: 2.5%
 }
+
+.room{
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.broom, .sroom{
+    width: 100%;
+    margin-bottom: 5%;    
+    float: left;
+}
+
 
 .rnum {
-    width: 70%;
+    width: 10%;
+    float: left;
 }
+
 
 button{
     border: 2px solid black ;
-    width: 70%;
-    padding-top: 28%;
-    padding: auto;
+    width: 100%;
+    padding-top: 70%;
 }
 
-.broom .rnum {
-    margin-bottom: 20%;
+
+.broom .rnum{
+    margin-right: 5%;
 }
+
 
 .broom .froom {
-    margin-bottom: 60%;
+    margin-left: 3%;
+    margin-right: 20%;
+}
+
+.sroom{
+    margin-left: 16%;
 }
 
 .sroom .rnum{
-    margin-top: 25%;
+    margin-left: 5%;
+}
+
+table{
+    width: 100%;
+}
+
+th,td{
+    text-align: center;
+    line-height: 2em;
+}
+
+td{
+    padding: 5px 10px;
+}
+
+th{
+    background: #666;
+    color: white;
+    padding: 5px 10px;
+}
+
+
+td:hover{
+    cursor: pointer;
+    background: #666;
+    color: white;
 }
