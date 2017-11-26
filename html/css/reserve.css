@@ -67,14 +67,14 @@ td{
     padding: 5px 10px;
 }
 
-th{
+th,td:first-child{
     background: #666;
     color: white;
     padding: 5px 10px;
 }
 
 
-td:hover{
+td:not(:first-child):hover{
     cursor: pointer;
     background: #666;
     color: white;
