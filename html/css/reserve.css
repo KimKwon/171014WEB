@@ -1,3 +1,7 @@
+nav{
+    background-image: none;
+    background-color: rgb(66, 135, 209);
+}
 .nav-content-inner ul{
     list-style: none;
     width: 100%;
@@ -13,22 +17,24 @@
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
+    /* background-color: white; */
 }
 .broom, .sroom{
     width: 100%;
-    margin-bottom: 5%;    
+    margin-bottom: 3%;    
     float: left;
 }
 
 
 .rnum {
-    width: 10%;
+    width: 15%;
     float: left;
 }
 
 
 button{
-    border: 2px solid black ;
+    border: 9px solid rgb(41, 108, 180) ;
+    border-radius: 20px;
     width: 100%;
     padding-top: 35%;
     padding-bottom: 35%;
@@ -37,6 +43,7 @@ button{
 
 
 .broom .rnum{
+    /* float: right; */
     margin-right: 5%;
 }
 
@@ -67,15 +74,16 @@ td{
     padding: 5px 10px;
 }
 
-th,td:first-child{
+th{
     background: #666;
     color: white;
     padding: 5px 10px;
 }
 
 
-td:not(:first-child):hover{
+td:hover{
     cursor: pointer;
     background: #666;
     color: white;
 }
+
