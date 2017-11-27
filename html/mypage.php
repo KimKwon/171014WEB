@@ -37,9 +37,11 @@
 
     </header>
     <nav>
-        <div class="nav-content">
-            <div class="nav-content-inner">
-                <div class="info">
+        
+
+        <!-- <div class="nav-content"> -->
+            <!-- <div class="nav-content-inner"> -->
+                <!-- <div class="info"> -->
                     <?php
                     if($_COOKIE["id"]) {
                         $user_id = $_COOKIE["id"];
@@ -47,7 +49,28 @@
                         $db = new PDO("mysql:dbname=smash", "root", "root");
                         $rows = $db->query($query);
                     ?>
-                        <h1><?= $user_id ?></h1>
+                        <h1><?= $user_id ?>'s</h1>
+                        <div class = "wrapper">
+                            <ul class = "sq clearfix"> 
+                                <li class = "sq-item sq-item-large"> 
+                                    <p class = "sq-item-anchor" > 예약확인</br><span>여기에 학생정보좀</span></p>
+
+                                </li>    
+                            
+                                <li class = "sq-item"> 
+                                    <a class = "sq-item-anchor" href=""> 예약확인 </a> 
+                                </li>
+                                <li class = "sq-item"> 
+                                    <a class = "sq-item-anchor" href=""> 예약관리 </br><span>여러분의 예약을 관리해드립니다.</span></a> 
+                                </li>
+                                <li class = "sq-item "> 
+                                    <a class = "sq-item-anchor" href=""> 개인정보수정 </br><span>여러분의 개인정보를 수정해드립니다.</span></a> 
+                                </li>
+                                <li class = "sq-item"> 
+                                <a class = "sq-item-anchor" href=""> 위시리스트 </br><span>어떤 날짜와 시간을 희망하셨나요?</span></a> 
+                                </li> 
+                            </ul>
+                        </div>
                         <table>
                             <tr><td>Room number</td><td>Time</td><td>Purpose</td><td>Population</td>
                     <?php
@@ -63,9 +86,9 @@
                         echo("<script>location.replace('index.html');</script>");
                     }
                     ?>
-                </div>
-            </div>
-        </div>
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
 
     </nav>
     <section class="intro">
