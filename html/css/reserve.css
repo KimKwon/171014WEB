@@ -1,6 +1,7 @@
 nav{
     background-image: none;
-    background-color: rgb(66, 135, 209);
+/*    background-color: rgb(66, 135, 209);*/
+    background-color: azure;
 }
 .nav-content-inner ul{
     list-style: none;
@@ -68,6 +69,7 @@ table{
 th,td{
     text-align: center;
     line-height: 2em;
+    width: 20px;
 }
 
 td{
@@ -80,10 +82,20 @@ th{
     padding: 5px 10px;
 }
 
-
-td:hover{
-    cursor: pointer;
+td:first-child{
     background: #666;
     color: white;
+    padding: 5px 10px;
+}
+
+td:not(:first-child):hover{
+    cursor: pointer;
+    background-color: beige;
+    color: white;
+    opacity: 30%;
+}
+
+.select{
+    background-color: bisque;
 }
 

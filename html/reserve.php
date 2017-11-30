@@ -14,6 +14,10 @@
     <link href="css/layout.css" rel="stylesheet">
 
     <link href="css/reserve.css" rel="stylesheet">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js" type="text/javascript"></script>
+    
+    <script src="js/reserve.js" type="text/javascript"></script>
 
 </head>
 
@@ -93,7 +97,7 @@
                         </tr>
                         
                         <tr>
-                            <td>TIME</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                            <td >TIME</td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td>
                         </tr>
                         
                         
