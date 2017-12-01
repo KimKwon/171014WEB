@@ -33,7 +33,7 @@ nav{
 }
 
 
-button{
+button:not(#submit){
     border: 9px solid rgb(41, 108, 180) ;
     border-radius: 20px;
     width: 100%;

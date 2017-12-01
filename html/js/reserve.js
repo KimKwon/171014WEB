@@ -9,6 +9,16 @@ window.onload = function() {
     for(var i=0;i<time.length; i++){
         time[i].observe("click",select);
     }
+    
+//    $("submit").onclick=function(){
+//            new Ajax.Request("register_info.php", {
+//                method: "get",
+//                parameters:{ reserve_date : reserve(), room_number :   },
+//                onSuccess: success,
+//                onFailure: Fail,
+//                onException: Fail
+//            });
+//    };
 };
 
 function select(event){
@@ -25,4 +35,26 @@ function select(event){
              numofcheck = numofcheck + 1;
         }
     }
+}
+
+//function room(){
+//    
+//}
+
+//function reserve(){
+//    var select
+//    var time = $$("time");
+//    for(var i=0;i<time.length; i++){
+//        if(time[i].hasClassName("select")){
+////            select.push(i);
+//            select = i;
+//        }
+//    }
+//}
+
+function success(){
+    alert(ajax.responseText);
+}
+function Fail(){
+    alert("실패");
 }
