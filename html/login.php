@@ -1,4 +1,6 @@
 <?php
+	session_start();
+
 	$id = $_POST["us_id"];
 	$pw = $_POST["us_pw"];
 
@@ -17,8 +19,9 @@
 		}
 	
 		if($flag_log) {
-			setcookie("id", $id);
-			header("Location: mypage.php");
+			$_SESSION["id"] = $id;
+			$_SESSION["status"] = "log_in";
+			header("Location: index.php");
 		} else {
 			echo "fail";
 		}
