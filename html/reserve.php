@@ -18,7 +18,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js" type="text/javascript"></script>
     
     <script src="js/reserve.js" type="text/javascript"></script>
-
+    <script src="javascript.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -37,73 +37,34 @@
         <div class="nav-content">
             <div class="nav-content-inner">
                 <div class="room">
-                    <?php
-                        $room_no = $_GET["room_number"];
-                        if(!isset($room_no)) {
-                            $room_no = 0;
-                        }
-                    ?>
                     <ul>
+                        <form action="" method="post">
                         <div class="broom">
-                            <li class="rnum froom"><a href="reserve.php?room_number=1"><button>SR#1</button></a></li>
-                            <li class="rnum"><a href="reserve.php?room_number=2"><button>SR#2</button></a></li>
-                            <li class="rnum"><a href="reserve.php?room_number=3"><button>SR#3</button></a></li>
-                            <li class="rnum"><a href="reserve.php?room_number=4"><button>SR#4</button></a></li>
+                            <li class="rnum froom"><button value="1">SR#1</button></li>
+                            <li class="rnum"><button value="2">SR#2</button></li>
+                            <li class="rnum"><button value="3">SR#3</button></li>
+                            <li class="rnum"><button value="4">SR#4</button></li>
                         </div>
 
                         <div class="sroom">
-                            <li class="rnum"><a href="reserve.php?room_number=5"><button>SR#5</button></a></li>
-                            <li class="rnum"><a href="reserve.php?room_number=6"><button>SR#6</button></a></li>
-                            <li class="rnum"><a href="reserve.php?room_number=7"><button>SR#7</button></a></li>
-                            <li class="rnum"><a href="reserve.php?room_number=8"><button>SR#8</button></a></li>
-                            <li class="rnum"><a href="reserve.php?room_number=9"><button>SR#9</button></a></li>
+                            <li class="rnum"><button value="5">SR#5</button></li>
+                            <li class="rnum"><button value="6">SR#6</button></li>
+                            <li class="rnum"><button value="7">SR#7</button></li>
+                            <li class="rnum"><button value="8">SR#8</button></li>
+                            <li class="rnum"><button value="9">SR#9</button></li>
                         </div>
+                        </form>
                     </ul>
                 </div>
                 <div class="timetable">
-<!--
-                    <ul>
-                        <?php
-                        if($room_no != 0) {
-                            try {
-                                $query = "SELECT room_date, room_check FROM room WHERE room_no = $room_no;";
-                                $db = new PDO("mysql:dbname=smash", "root", "root");
-                                $rows = $db->query($query);
-                        ?>
-                                <ul>
-                                <?php foreach($rows as $row) { ?>
-                                    <li>
-                                        <?php if($row["room_check"] == 'FALSE') { ?>
-                                            <a href="get_reservation_info.php?room_number=<?= $room_no ?>&date=<?= $row["room_date"] ?>"><?= $row["room_date"] ?></a>
-                                        <?php } else { ?>
-                                            <?= $row["room_date"] ?>
-                                        <?php } ?>
-                                    </li>
-                                <?php } ?>
-                                </ul>
-                        <?php
-                            } catch (PDOException $e) {
-                                echo "fail";
-                            }
-                        }
-                        ?>
-                    </ul>
--->
-                    
-                    <table>
-                        
+                    <table id="table">
                         <tr>
                             <th>TIME</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th>
                         </tr>
                         
-                        <tr>
-                            <td >TIME</td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td>
+                        <tr id="tr">
+                            <td>TIME</td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td>
                         </tr>
-                        
-                        
-                        
-                        
-                        
                     </table>
                 </div>
             </div>
