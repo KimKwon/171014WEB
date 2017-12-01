@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 
 <head>
@@ -18,7 +22,9 @@
 </head>
 
 <body>
-
+    <?php
+        if(!isset($_SESSION["status"])) { $_SESSION["status"] = "log_out"; }
+    ?>
     <div id="full">
         <header>
             <ul>
@@ -28,16 +34,28 @@
                 <li><a href="#all">About us</a></li>
                     <!-- 천천히 내리는거 추가 해야함 -->
                 <li class="dropdown">
-                    sign up
-                    <div class="dropdown-content">
-                        <a href="signup.html">sign up</a>
-                        <a href="signin.html">sign in</a>
-                    </div>
-
+<?php
+                    if($_SESSION["status"] == "log_out") {
+?>
+                        sign up
+                        <div class="dropdown-content">
+                            <a href="signup.html">sign up</a>
+                            <a href="signin.html">sign in</a>
+                        </div>
+<?php
+                    } else {
+?>
+                        my info
+                        <div class="dropdown-content">
+                            <a href="mypage.php">my page</a>
+                        </div>
+<?php
+                    }
+?>
                 </li>
             </ul>
-
         </header>
+
         <nav>
             <div class="nav-content">
                 <div class="nav-content-inner">
@@ -46,23 +64,15 @@
                     <p>For Smash Reservation</p>
                     <p>If you don't have account, make it right now!</p>
                     <br/>
-
-                    <?php $signed = $_GET["signed"];?>
-                        <?if ($signed != true) {?>
-                            <a href="signup.html"><button class="greenButton">sign up</button></a>
-                        <?}
-                        else {?>
-                            <a href="signin.html"><button class="greenButton">sign in</button></a>
-                        <?}?>
-
-
-
-
+                    <a href="signup.html"><button class="greenButton">sign up</button></a>
+                    <br>
+                    <a href="signin.html"><button class="greenButton">sign in</button></a>
                     <br/>
-                </div>
-            </div>
+                </div> <!-- class="nav-content-inner" -->
+            </div> <!-- class="nav-content" -->
         </nav>
-    <div>
+    <div> <!-- id="full" -->
+
     <section>
         <div id="all">
         <div class="front">
@@ -78,7 +88,7 @@
                             <strong class="role">Web Designer</strong>
                             <p>Front 입니다</p>
             </div>
-        </div>
+        </div> <!-- class="front" -->
         <div class="back">
             <div class = "boxing">
             <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
@@ -98,8 +108,8 @@
                             <strong class="role">Coder</strong>
                             <p>Back 입니다.</p>
             </div>
-        </div>
-        </div>
+        </div> <!-- class="back" -->
+        </div> <!-- id="all" -->
     </section>
     <footer class="intro">
         <div class="container">
