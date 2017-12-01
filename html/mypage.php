@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,9 +30,9 @@
             <li><a href="contactus.html">Contact us</a></li>
             <!-- <li><a href="aboutus.html">About us</a></li> -->
             <li class="dropdown">
-                My Page
+                Log out
                 <div class="dropdown-content">
-                    <a href="mypage.php?logged=false">Log Out</a>
+                    <a href="logout.php">Log Out</a>
                 </div>
 
             </li>
@@ -43,8 +46,8 @@
             <!-- <div class="nav-content-inner"> -->
                 <!-- <div class="info"> -->
                     <?php
-                    if($_COOKIE["id"]) {
-                        $user_id = $_COOKIE["id"];
+                    if($_SESSION["status"] == "log_in") {
+                        $user_id = $_SESSION["id"];
                         $query = "SELECT * FROM reservation WHERE id='$user_id'";
                         $db = new PDO("mysql:dbname=smash", "root", "root");
                         $rows = $db->query($query);
@@ -83,7 +86,7 @@
                         </table>
                     <?php
                     } else {
-                        echo("<script>location.replace('index.html');</script>");
+                        echo("<script>location.replace('index.php');</script>");
                     }
                     ?>
                 <!-- </div> -->
