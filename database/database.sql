@@ -10,14 +10,13 @@ create table user_info(
 
 create table room(
 	room_no integer not null,
-	room_date timestamp not null,
 	room_check varchar(10) not null
 );
-alter table room add primary key(room_no, room_date);
+alter table room add primary key(room_no);
 
 create table reservation(
 	id varchar(30) not null,
-	reserve_date timestamp not null,
+	reserve_date integer not null,
 	reserve_room_no integer not null,
 	purpose varchar(300),
 	population integer not null,
@@ -27,8 +26,6 @@ create table reservation(
 alter table reservation add primary key(reserve_date, reserve_room_no);
 
 alter table reservation add foreign key(id) references user_info(user_id);
---alter table reservation add foreign key(reserve_date) references room(room_date) on delete cascade;
-
 insert into user_info values('A', 'asd123', 'A@naver.com');
 insert into user_info values('B', 's2d4f5e', 'B@naver.com');
 insert into user_info values('C', '2', 'C@naver.com');
