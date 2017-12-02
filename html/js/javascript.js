@@ -6,8 +6,8 @@ Ajax.Responders.register({
 });
 
 function ajaxFailure(ajax, exception) {
-    alert("Error making Ajax request:" + 
-          "\n\nServer status:\n" + ajax.status + " " + ajax.statusText + 
+    alert("Error making Ajax request:" +
+          "\n\nServer status:\n" + ajax.status + " " + ajax.statusText +
           "\n\nServer response text:\n" + ajax.responseText);
     if (exception) {
         throw exception;
@@ -30,12 +30,20 @@ function show_time_table(room_no) {
 }
 
 function show_time(ajax) {
-    alert(ajax.responseText);
+    // alert(ajax.responseText);
     var data = JSON.parse(ajax.responseText);
     $("tr").innerHTML = "<td>TIME</td>";
     for(var i = 0; i < data.times.length; i++) {
         var td = document.createElement("td");
-        td.innerHTML = data.times[i].status;
+        // td.innerHTML = data.times[i].status + "!";
+        if(data.times[i].status =="possible"){
+            td.innerHTML = [i];
+        }
         tr.appendChild(td);
     }
+    var td = $$("td");
+    for(var i=0;i<td.length;i++){
+        td[i].addClassName("select");
+    }
+    // alert("이러고 바로 돌아감;");
 }

@@ -14,11 +14,11 @@
     <link href="css/layout.css" rel="stylesheet">
 
     <link href="css/reserve.css" rel="stylesheet">
-    
+
     <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js" type="text/javascript"></script>
-    
-    <script src="js/reserve.js" type="text/javascript"></script>
-    <script src="javascript.js" type="text/javascript"></script>
+
+    <!-- <script src="js/reserve.js" type="text/javascript"></script> -->
+    <script src="js/javascript.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -61,16 +61,16 @@
                         <tr>
                             <th>TIME</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th>
                         </tr>
-                        
+
                         <tr id="tr">
-                            <td>TIME</td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td><td class="time"></td>
+                            <td>time</td>
                         </tr>
                     </table>
                 </div>
             </div>
             <button id="submit">Submit</button>
         </div>
-        
+
 
     </nav>
     <section class="intro">
