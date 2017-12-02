@@ -19,9 +19,26 @@
 
     <link href="css/about.css" rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      jQuery.noConflict();
+      var j$ = jQuery;
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="js/time.js"></script>
+
+
+
 </head>
 
 <body>
+    <div class="clock">
+      <p><span id='clocker'></span></p>
+    </div>
+    <!-- <button type="button" id="fold" name="button">접기</button> -->
     <?php
         if(!isset($_SESSION["status"])) { $_SESSION["status"] = "log_out"; }
     ?>
@@ -30,7 +47,7 @@
             <ul>
                 <a href="index.php">Ordinary Colleage Students</a>
                 <li><a href="reserve.php">Reservation</a></li>
-                <li><a href="contactus.html">Contact us</a></li>
+                <li><a id='fold'>Server Time</a></li>
                 <li><a href="#all">About us</a></li>
                     <!-- 천천히 내리는거 추가 해야함 -->
                 <li class="dropdown">

@@ -42,7 +42,7 @@
     <nav>
 
 
-        <!-- <div class="nav-content"> -->
+        <div class="nav-content">
             <!-- <div class="nav-content-inner"> -->
                 <!-- <div class="info"> -->
                     <?php
@@ -74,16 +74,6 @@
                                 </li>
                             </ul>
                         </div>
-                        <table>
-                            <tr><td>Room number</td><td>Time</td><td>Purpose</td><td>Population</td>
-                    <?php
-                            foreach ($rows as $row) {
-                    ?>
-                            <tr><td><?= $row["reserve_room_no"] ?></td><td><?= $row["reserve_date"] ?></td><td><?= $row["purpose"] ?></td><td><?= $row["population"] ?></td>
-                    <?php
-                        }
-                    ?>
-                        </table>
                     <?php
                     } else {
                         echo("<script>location.replace('index.php');</script>");
@@ -91,7 +81,7 @@
                     ?>
                 <!-- </div> -->
             <!-- </div> -->
-        <!-- </div> -->
+        </div>
 
     </nav>
     <section class="intro">
