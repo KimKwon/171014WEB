@@ -24,21 +24,6 @@ function printTime(){
     }).done(function(){console.log("done")})
     .fail(function(){console.log("fail")})
   }
-  // var xhr = new XMLHttpRequest();
-  // xhr.open('GET','./time.php');
-  // xhr.onreadystatechange = function(){
-  //   if(xhr.readyState === 4 && xhr.status === 200){
-  //     $('clocker').innerHTML = xhr.responseText.trigger("create");
-  //   }
-  // }
-  // xhr.send();
-  // complete :function(req,textStatus){
-  //   var _date = req.getResponseHeader('Date');
-  //   if(_date.indexOf('GMT') === -1) date += ' GMT';
-  //   var date = new Date(_date);
-  //   j$('#clocker').html(date);
-  //   j$('.clock').css({"font-size":"3em","text-align":"center"});
-  // }
 }
 
 function hideSwitch(){
