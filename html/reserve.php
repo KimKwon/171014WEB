@@ -40,18 +40,18 @@
                     <ul>
                         <form action="" method="post">
                         <div class="broom">
-                            <li class="rnum froom"><button value="1">SR#1</button></li>
-                            <li class="rnum"><button value="2">SR#2</button></li>
-                            <li class="rnum"><button value="3">SR#3</button></li>
-                            <li class="rnum"><button value="4">SR#4</button></li>
+                            <li class="rnum froom">SR#1</li>
+                            <li class="rnum">SR#2</li>
+                            <li class="rnum">SR#3</li>
+                            <li class="rnum">SR#4</li>
                         </div>
 
                         <div class="sroom">
-                            <li class="rnum"><button value="5">SR#5</button></li>
-                            <li class="rnum"><button value="6">SR#6</button></li>
-                            <li class="rnum"><button value="7">SR#7</button></li>
-                            <li class="rnum"><button value="8">SR#8</button></li>
-                            <li class="rnum"><button value="9">SR#9</button></li>
+                            <li class="rnum">SR#5</li>
+                            <li class="rnum">SR#6</li>
+                            <li class="rnum">SR#7</li>
+                            <li class="rnum">SR#8</li>
+                            <li class="rnum">SR#9</li>
                         </div>
                         </form>
                     </ul>

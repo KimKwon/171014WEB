@@ -27,15 +27,30 @@ try {
         $time_table[$row["reserve_time"]] = "impossible";
     }
 
-    header("Content-type: application/json");
-    print "{\n  \"times\": [\n";
-    for($i = 9; $i < 20; $i++) {
-        if($i != 9) { print ",\n"; }
-        $status = $time_table[$i];
-        print "{\"time\": $i, \"status\": \"$status\"}";
-        if($i == 19) { print "\n"; }
+    // header("Content-type: application/json");
+    // print "{\n  \"times\": [\n";
+    // for($i = 9; $i < 20; $i++) {
+    //     if($i != 9) { print ",\n"; }
+    //     $status = $time_table[$i];
+    //     print "{\"time\": $i, \"status\": \"$status\"}";
+    //     if($i == 19) { print "\n"; }
+    // }
+    // print "  ]\n}\n";
+    $xmldoc = new DOMDocument();
+    $times_tag = $xmldoc->createElement("times"); //<times>
+    for ($i=9; $i < 20 ; $i++) {
+        $time_tag = $xmldoc->createElement("time"); //<time>
+        $time_tag->setAttribute("t", $i);
+        $time_tag->setAttribute("st", $time_table[$i]);
+        $times_tag->appendChild($time_tag);
     }
-    print "  ]\n}\n";
+    $xmldoc -> appendChild($times_tag);
+    header("Content-type: text/xml");
+    print $xmldoc->saveXML();
+
+
+
+
 } catch (PDOException $e) {
     echo "fail";
 }
