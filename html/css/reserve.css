@@ -18,12 +18,18 @@ nav{
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
+    border: 3px solid black;
+    border-radius: 15px;
     /* background-color: white; */
 }
+
 .broom, .sroom{
     width: 100%;
-    margin-bottom: 3%;
     float: left;
+    margin-bottom: 1%;
+}
+.broom{
+    margin-bottom: 5%;
 }
 
 
@@ -32,8 +38,8 @@ nav{
     float: left;
     border: 9px solid rgb(41, 108, 180) ;
     border-radius: 20px;
-    padding-top: 3.5%;
-    padding-bottom: 3.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     text-align: center;
     color: black;
     /*background-color: black;*/
@@ -100,7 +106,3 @@ td:first-child{
 .select{
     background-color: bisque;
 }
-
-/*.select2{
-    background-color: blue;
-}*/

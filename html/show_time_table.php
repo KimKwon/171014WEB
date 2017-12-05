@@ -15,7 +15,7 @@ try {
     	sleep($delay);
     }
 
-    $room_no = $_GET["room_number"];
+    $room_no = $_GET["room_number"]+1;
     $query = "SELECT reserve_time FROM reservation WHERE reserve_room_no = $room_no";
     $db = new PDO("mysql:dbname=smash", "root", "root");
     $rows = $db->query($query);
@@ -38,6 +38,7 @@ try {
     // print "  ]\n}\n";
     $xmldoc = new DOMDocument();
     $times_tag = $xmldoc->createElement("times"); //<times>
+    $times_tag -> setAttribute("room",$room_no);
     for ($i=9; $i < 20 ; $i++) {
         $time_tag = $xmldoc->createElement("time"); //<time>
         $time_tag->setAttribute("t", $i);
