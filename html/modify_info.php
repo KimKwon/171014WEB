@@ -58,12 +58,23 @@
 
                       <div class="modifier">
                         <ul>
-                          <li><a href="modify_info.php?modify=pw">비밀번호 변경하기</a></li>
-                          <li><a href="modify_info.php?modify=em">이메일 변경하기</a></li>
+                          <li><a href="modify_info.php?modify=pw"> 비밀번호 변경하기 </a></li>
+                          <li><a href="modify_info.php?modify=em"> 이메일 변경하기</a></li>
                           <li><a href="mypage.php">돌아가기</a></li>
+                          <style media="screen">
+                            .modifier li{
+                              list-style-type:none;
+                            }
+                            .modifier li a:visited, .modifier li a:link{
+                              color: pink;
+                              text-decoration: none;
+                            }
+                            .modifier li a:hover{
+                              color:white;
+                            }
+                          </style>
                         </ul>
                       </div>
-                      <br>
                       <hr>
                       <br>
                     <?php

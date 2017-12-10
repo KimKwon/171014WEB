@@ -15,7 +15,7 @@ try {
     	sleep($delay);
     }
 
-    $room_no = $_GET["room_number"]+1;
+    $room_no = $_GET["room_number"];
     $query = "SELECT reserve_time FROM reservation WHERE reserve_room_no = $room_no";
     $db = new PDO("mysql:dbname=smash", "root", "root");
     $rows = $db->query($query);

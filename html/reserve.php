@@ -40,18 +40,18 @@
                     <ul>
                         <form action="" method="post">
                         <div class="broom">
-                            <li class="rnum froom">SR#1</li>
-                            <li class="rnum">SR#2</li>
-                            <li class="rnum">SR#3</li>
-                            <li class="rnum">SR#4</li>
+                            <li class="rnum froom" id='1'>SR#1</li>
+                            <li class="rnum" id='2'>SR#2</li>
+                            <li class="rnum" id='3'>SR#3</li>
+                            <li class="rnum" id='4'>SR#4</li>
                         </div>
 
                         <div class="sroom">
-                            <li class="rnum">SR#5</li>
-                            <li class="rnum">SR#6</li>
-                            <li class="rnum">SR#7</li>
-                            <li class="rnum">SR#8</li>
-                            <li class="rnum">SR#9</li>
+                            <li class="rnum" id='5'>SR#5</li>
+                            <li class="rnum" id='6'>SR#6</li>
+                            <li class="rnum" id='7'>SR#7</li>
+                            <li class="rnum" id='8'>SR#8</li>
+                            <li class="rnum" id='9'>SR#9</li>
                         </div>
                         </form>
                     </ul>

@@ -11,6 +11,15 @@ function ajaxFailure(ajax, exception) {
 
 window.onload = function() {
     var rnums = $$("li.rnum");
+    rnums.invoke('observe','click',function(){
+      new Ajax.Request("show_time_table.php",{
+        method: "GET",
+        parameters: {room_number: this.id},
+        onSuccess: show_time,
+        onFailure: ajaxFailure
+      });
+    });
+
     // for(var i = 0; i < rnums.length; i++) {
     //     rnums[i].onclick = function() { new Ajax.Request("show_time_table.php", {
     //         method: "get",
@@ -20,34 +29,35 @@ window.onload = function() {
     //         });
     //     };
     // } 이거로 하면 무조건 i가 9가 보내짐 - 이유 아는 사람?
-    rnums[0].onclick = function() { new Ajax.Request("show_time_table.php", {
-        method: "get",
-        parameters: {room_number: 0},
-        onSuccess: show_time,
-        onFailure: ajaxFailure
-        });
-    };
-    rnums[1].onclick = function() { new Ajax.Request("show_time_table.php", {
-        method: "get",
-        parameters: {room_number: 1},
-        onSuccess: show_time,
-        onFailure: ajaxFailure
-        });
-    };
-    rnums[2].onclick = function() { new Ajax.Request("show_time_table.php", {
-        method: "get",
-        parameters: {room_number: 2},
-        onSuccess: show_time,
-        onFailure: ajaxFailure
-        });
-    };
-    rnums[3].onclick = function() { new Ajax.Request("show_time_table.php", {
-        method: "get",
-        parameters: {room_number: 3},
-        onSuccess: show_time,
-        onFailure: ajaxFailure
-        });
-    };
+
+    // rnums[0].onclick = function() { new Ajax.Request("show_time_table.php", {
+    //     method: "get",
+    //     parameters: {room_number: 0},
+    //     onSuccess: show_time,
+    //     onFailure: ajaxFailure
+    //     });
+    // };
+    // rnums[1].onclick = function() { new Ajax.Request("show_time_table.php", {
+    //     method: "get",
+    //     parameters: {room_number: 1},
+    //     onSuccess: show_time,
+    //     onFailure: ajaxFailure
+    //     });
+    // };
+    // rnums[2].onclick = function() { new Ajax.Request("show_time_table.php", {
+    //     method: "get",
+    //     parameters: {room_number: 2},
+    //     onSuccess: show_time,
+    //     onFailure: ajaxFailure
+    //     });
+    // };
+    // rnums[3].onclick = function() { new Ajax.Request("show_time_table.php", {
+    //     method: "get",
+    //     parameters: {room_number: 3},
+    //     onSuccess: show_time,
+    //     onFailure: ajaxFailure
+    //     });
+    // };
 
 
     // rnums[0].onclick = function() { new Ajax.Request("show_time_table.php", {
