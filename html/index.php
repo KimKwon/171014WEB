@@ -46,7 +46,7 @@
         <header>
             <ul>
                 <a href="index.php">Ordinary Colleage Students</a>
-                <li><a href="reserve.php">Reservation</a></li>
+                <li><a href="reserve.html">Reservation</a></li>
                 <li><a id='fold'>Server Time</a></li>
                 <li><a href="#all">About us</a></li>
                     <!-- 천천히 내리는거 추가 해야함 -->

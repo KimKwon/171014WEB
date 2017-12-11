@@ -26,7 +26,7 @@
     <header>
         <ul>
             <a href="index.php">Ordinary Colleage Students</a>
-            <li><a href="reserve.php">Reservation</a></li>
+            <li><a href="reserve.html">Reservation</a></li>
             <li><a href="contactus.html">Contact us</a></li>
             <!-- <li><a href="aboutus.html">About us</a></li> -->
             <li class="dropdown">

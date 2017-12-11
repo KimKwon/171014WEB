@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Smash Revervation</title>
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="css/layout.css" rel="stylesheet">
+
+    <link href="css/reserve.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.js"></script>
+
+    <script type="text/javascript">
+      jQuery.noConflict();
+      var j$ = jQuery;
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js" type="text/javascript"></script>
+
+    <!-- <script src="js/reserve.js" type="text/javascript"></script> -->
+    <script src="js/javascript.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+
+    <header>
+        <ul>
+            <a href="index.php">Ordinary Colleage Students</a>
+            <li><a href="contactus.html">Contact us</a></li>
+            <!-- <li><a href="aboutus.html">About us</a></li> -->
+            <li>Booking</li>
+        </ul>
+
+    </header>
+    <nav>
+        <div class="nav-content">
+            <div class="nav-content-inner">
+
+                <div class="room">
+                        <div class="broom">
+                            <button class='rnum froom' name='room_number' id='1' value='1'>SR#1</button>
+                            <button class='rnum' name='room_number' id='2' value='2'>SR#2</button>
+                            <button class='rnum' name='room_number' id='3' value='3'>SR#3</button>
+                            <button class='rnum' name='room_number' id='4' value='4'>SR#4</button>
+
+
+                            <!-- <li class="rnum froom" id='1'>SR#1</li>
+                            <li class="rnum" id='2'>SR#2</li>
+                            <li class="rnum" id='3'>SR#3</li>
+                            <li class="rnum" id='4'>SR#4</li> -->
+                        </div>
+
+                        <div class="sroom">
+                          <button class='rnum froom' id='5' value='5' name='room_number'>SR#5</button>
+                          <button class='rnum' id='6' value='6' name='room_number'>SR#6</button>
+                          <button class='rnum' id='7' value='7' name='room_number'>SR#7</button>
+                          <button class='rnum' id='8' value='8' name='room_number'>SR#8</button>
+                          <button class='rnum' id='9' value='9' name='room_number'>SR#9</button>
+
+                            <!-- <li class="rnum" id='5'>SR#5</li>
+                            <li class="rnum" id='6'>SR#6</li>
+                            <li class="rnum" id='7'>SR#7</li>
+                            <li class="rnum" id='8'>SR#8</li>
+                            <li class="rnum" id='9'>SR#9</li> -->
+                        </div>
+                        </form>
+
+                </div>
+                <div class="timetable">
+                    <table id="table">
+                        <tr draggable="true">
+                            <th>TIME</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th>
+                        </tr>
+
+                        <tr id="tr">
+                            <td>time</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        <br>
+            <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+          예약하기
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">예약 정보 입력</h4>
+              </div>
+              <div class="modal-body">
+                <form action="register_info.php" method='post'>
+                <div class="form-group">
+                    <label class="control-label">사용 날짜:</label><br>
+                    <input type="date" name='date' class="form-control" id="form_date">
+                    <br>
+                    <label class="control-label">사용 시간:</label><br>
+                    <select class="form-control" name="date_time" multiple>
+                      <optgroup label="사용 시간 선택">
+                        <option value="9">AM 09:00</option>
+                        <option value="10">AM 10:00</option>
+                        <option value="11">AM 11:00</option>
+                        <option value="12">AM 12:00</option>
+                        <option value="13">AM 13:00</option>
+                        <option value="14">AM 14:00</option>
+                        <option value="15">AM 15:00</option>
+                        <option value="16">AM 16:00</option>
+                        <option value="17">AM 17:00</option>
+                        <option value="18">AM 18:00</option>
+                        <option value="19">AM 19:00</option>
+                      </optgroup>
+                    </select>
+                    <br>
+                    <label class="control-label">사용 목적:</label><br>
+                    <input type="text" name='purpose' class="form-control" id="form_purpose">
+                    <br>
+                    <label class="control-label">사용 인원:</label><br>
+                    <textarea name='population' class="form-control" id="form_population"></textarea>
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                <button type="submit" class="btn btn-primary">확인</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+            <!-- <button id="submit">제출하기</button> -->
+        </div>
+
+
+    </nav>
+    <section class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2 class="section-heading">Completely synergize resource taxing relationships</h2>
+                    <p class="text-light">Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

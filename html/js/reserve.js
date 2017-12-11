@@ -4,12 +4,15 @@
 var numofcheck =0;
 
 window.onload = function() {
-    
+
     var time = $$("td:not(:first-child)");
     for(var i=0;i<time.length; i++){
         time[i].observe("click",select);
     }
+
     
+
+
 //    $("submit").onclick=function(){
 //            new Ajax.Request("register_info.php", {
 //                method: "get",
@@ -38,7 +41,7 @@ function select(event){
 }
 
 //function room(){
-//    
+//
 //}
 
 //function reserve(){

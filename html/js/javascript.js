@@ -10,7 +10,9 @@ function ajaxFailure(ajax, exception) {
 }
 
 window.onload = function() {
-    var rnums = $$("li.rnum");
+
+    var rnums = $$("button.rnum");
+
     rnums.invoke('observe','click',function(){
       new Ajax.Request("show_time_table.php",{
         method: "GET",
@@ -19,6 +21,14 @@ window.onload = function() {
         onFailure: ajaxFailure
       });
     });
+
+    j$('#myModalLabel').css("color","black");
+    j$('.modal-body').css("color","black");
+
+    // j$('#myModal').observe('click',function(){
+    //   j$('#myModal').modal('show');
+    // });
+
 
     // for(var i = 0; i < rnums.length; i++) {
     //     rnums[i].onclick = function() { new Ajax.Request("show_time_table.php", {
