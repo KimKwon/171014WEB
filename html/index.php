@@ -41,36 +41,20 @@
         if(!isset($_SESSION["status"])) { $_SESSION["status"] = "log_out"; }
     ?>
     <div id="full">
-        <header>
-        
 <?php
-                    if($_SESSION["status"] == "log_out") {
+        if($_SESSION["status"] == "log_out") {
 ?>
-                        
-<?php
-                    } else {
-?>
-                        my info
-                        <div class="dropdown-content">
-                            <a href="mypage.php">my page</a>
-                        </div>
-<?php
-                    }
-?>
-            
-        </header>
-
+    <header>
+    </header>
         <nav>
             <div class="nav-content">
                 <div class="nav-content-inner">
-                <video autoplay loop id="video-background" muted plays-inline>
-                    <source src="video/head3.mp4" type="video/mp4">
-                </video>
-                
+                    <video autoplay loop id="video-background" muted plays-inline>
+                        <source src="video/head3.mp4" type="video/mp4">
+                    </video>
                     <div id="polina">
                         <div class="smash">    
                             <h1>SMASH</h1>
-                        
                         <div class="sclock">
                             <p class = "clock"></p>
                         </div>
@@ -137,6 +121,93 @@
             </div>
         </div>
     </footer>
+<?php
+        } else {
+?>
+            <div class="dropdown-content">
+                <a href="mypage.php">my page</a>
+                        </div>
+    
 
+        <nav>
+            <div class="nav-content">
+                <div class="nav-content-inner">
+                <video autoplay loop id="video-background" muted plays-inline>
+                    <source src="video/head3.mp4" type="video/mp4">
+                </video>
+                
+                    <div id="polina">
+                        <div class="smash">    
+                            <h1>SMASH</h1>
+                        
+                        <div class="sclock">
+                            <p class = "clock"></p>
+                        </div>
+                        </div>
+                        <div id="afterlogin">
+                            <ul>
+                                <li><a href="mypage.php">My Page</a></li>
+                                <li><a href="reserve.html">Reservation</li>
+                            </ul>    
+                        <div>  
+                    </div>
+                </div> <!-- class="nav-content-inner" -->
+            </div> <!-- class="nav-content" -->
+        </nav>
+    <div> <!-- id="full" -->
 
+    <section class="seccolor">
+        <div id="all">
+        <div class="front">
+            <div class = "boxing">
+            <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+                            <h3>윤가영</h3>
+                            <strong class="role">Web Designer</strong>
+                            <p>Front 입니다</p>
+            </div >
+            <div class = "boxing">
+            <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+                            <h3>한건희</h3>
+                            <strong class="role">Web Designer</strong>
+                            <p>Front 입니다</p>
+            </div>
+        </div> <!-- class="front" -->
+        <div class="back">
+            <div class = "boxing">
+            <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+                            <h3>권혁진</h3>
+                            <strong class="role">Coder</strong>
+                            <p>Back 입니다.</p>
+            </div>
+            <div class = "boxing">
+            <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+                            <h3>박현준</h3>
+                            <strong class="role">Coder</strong>
+                            <p>Back 입니다.</p>
+            </div>
+            <div class = "boxing">
+            <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+                        <h3>배성훈</h3>
+                            <strong class="role">Coder</strong>
+                            <p>Back 입니다.</p>
+            </div>
+        </div> <!-- class="back" -->
+        </div> <!-- id="all" -->
+    </section>
+    <footer class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2 class="section-heading">Copyright</h2>
+                    <p class="text-light">This web is Ordinary student's web</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <?php
+        }
+?>
+            
+    
 </body>

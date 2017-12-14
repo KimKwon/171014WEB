@@ -38,7 +38,7 @@ video {
     float: left;
     padding-left: 5em;
     padding-top: 3em;
-    padding-left: 2em;
+    padding-right: 2em;
 }
 .sclock{
     margin-top: 2em;
@@ -47,6 +47,25 @@ video {
 .forsmash{
     padding-top: 8em;
     padding-left: 30em;
+}
+#afterlogin{
+    padding-top: 8em;
+    padding-left: 30em;
+}
+#afterlogin a{
+    color: rgb(77, 53, 39);
+
+}
+#afterlogin a:visited{
+    color: rgb(77, 53, 39);
+    
+}
+
+#afterlogin li{
+    list-style: none;
+    padding-bottom: 5em;
+    color: rgb(77, 53, 39);
+    font-size: 40px;
 }
 #polina { 
     background-color: rgba(255,255,255,.7);
@@ -61,8 +80,9 @@ video {
     margin: auto;
 }
 #polina h1{
-    font-size: 250px;
+    font-size: 220px;
 }
+
 h1 {
   font-size: 3rem;
   text-transform: uppercase;
