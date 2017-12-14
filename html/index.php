@@ -30,8 +30,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js" type="text/javascript"></script>
 
     <script type="text/javascript" src="js/time.js"></script>
-    <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"> </script>
-    <script src = "http://malsup.github.com/jquery.cycle2.js"> </script>
+
 
 
 </head>
@@ -132,7 +131,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2 class="section-heading">Copyright</h2>
-                    <p class="text-light">Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
+                    <p class="text-light">This web is Ordinary student's web</p>
                 </div>
             </div>
         </div>

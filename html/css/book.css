@@ -18,10 +18,8 @@ span{
     z-index: 30;
     position: relative;
 }
-body{
-    background-color: rgb(73, 135, 194);
-}
 .clearfix::after{
+    
     content: ' ';
     display: block;
     clear: both;
