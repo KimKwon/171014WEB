@@ -19,6 +19,7 @@
 
     <link href="css/about.css" rel="stylesheet">
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script type="text/javascript">
@@ -29,7 +30,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js" type="text/javascript"></script>
 
     <script type="text/javascript" src="js/time.js"></script>
-
+    <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"> </script>
+    <script src = "http://malsup.github.com/jquery.cycle2.js"> </script>
 
 
 </head>
@@ -44,21 +46,11 @@
     ?>
     <div id="full">
         <header>
-            <ul>
-                <a href="index.php">Ordinary Colleage Students</a>
-                <li><a href="reserve.html">Reservation</a></li>
-                <li><a id='fold'>Server Time</a></li>
-                <li><a href="#all">About us</a></li>
-                    <!-- 천천히 내리는거 추가 해야함 -->
-                <li class="dropdown">
+        
 <?php
                     if($_SESSION["status"] == "log_out") {
 ?>
-                        sign up
-                        <div class="dropdown-content">
-                            <a href="signup.html">sign up</a>
-                            <a href="signin.html">sign in</a>
-                        </div>
+                        
 <?php
                     } else {
 ?>
@@ -69,28 +61,35 @@
 <?php
                     }
 ?>
-                </li>
-            </ul>
+            
         </header>
 
         <nav>
             <div class="nav-content">
                 <div class="nav-content-inner">
-                    <br/>
-                    <h1>SMASH </h1>
-                    <p>For Smash Reservation</p>
-                    <p>If you don't have account, make it right now!</p>
-                    <br/>
-                    <a href="signup.html"><button class="greenButton">sign up</button></a>
-                    <br>
-                    <a href="signin.html"><button class="greenButton">sign in</button></a>
-                    <br/>
+                <video autoplay loop id="video-background" muted plays-inline>
+                    <source src="video/head3.mp4" type="video/mp4">
+                </video>
+                
+                    <div id="polina">
+                        <div class="smash">    
+                        <h1>SMASH</h1>
+                        </div>
+                        <div class="forsmash">
+                            <p>For Smash Reservation</p>
+                            <p>If you don't have account, make it right now!</a></br>
+                            <div class="polinamargin">
+                                <a href="signup.html"><button class="greenButton">sign up</button></a>
+                                <a href="signin.html"><button class="greenButton">sign in</button></a>
+                            </div>
+                        <div>  
+                    </div>
                 </div> <!-- class="nav-content-inner" -->
             </div> <!-- class="nav-content" -->
         </nav>
     <div> <!-- id="full" -->
 
-    <section>
+    <section class="seccolor">
         <div id="all">
         <div class="front">
             <div class = "boxing">
@@ -132,7 +131,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2 class="section-heading">Completely synergize resource taxing relationships</h2>
+                    <h2 class="section-heading">Copyright</h2>
                     <p class="text-light">Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
                 </div>
             </div>
