@@ -21,15 +21,22 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.js"></script>
 
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="js/reserve.js" type="text/javascript"></script>
     <script type="text/javascript">
+
       jQuery.noConflict();
       var j$ = jQuery;
+
     </script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js" type="text/javascript"></script>
 
     <!-- <script src="js/reserve.js" type="text/javascript"></script> -->
-    <script src="js/javascript.js" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -39,7 +46,7 @@
         <ul>
             <a href="index.php">Ordinary Colleage Students</a>
             <li><a href="contactus.html">Contact us</a></li>
-            <!-- <li><a href="aboutus.html">About us</a></li> -->
+            <li><a href="aboutus.html">About us</a></li>
             <li>Booking</li>
         </ul>
 
@@ -47,52 +54,49 @@
     <nav>
         <div class="nav-content">
             <div class="nav-content-inner">
-
-                <div class="room">
-                        <div class="broom">
-                            <button class='rnum froom' name='room_number' id='1' value='1'>SR#1</button>
-                            <button class='rnum' name='room_number' id='2' value='2'>SR#2</button>
-                            <button class='rnum' name='room_number' id='3' value='3'>SR#3</button>
-                            <button class='rnum' name='room_number' id='4' value='4'>SR#4</button>
-
-
-                            <!-- <li class="rnum froom" id='1'>SR#1</li>
-                            <li class="rnum" id='2'>SR#2</li>
-                            <li class="rnum" id='3'>SR#3</li>
-                            <li class="rnum" id='4'>SR#4</li> -->
-                        </div>
-
-                        <div class="sroom">
-                          <button class='rnum froom' id='5' value='5' name='room_number'>SR#5</button>
-                          <button class='rnum' id='6' value='6' name='room_number'>SR#6</button>
-                          <button class='rnum' id='7' value='7' name='room_number'>SR#7</button>
-                          <button class='rnum' id='8' value='8' name='room_number'>SR#8</button>
-                          <button class='rnum' id='9' value='9' name='room_number'>SR#9</button>
-
-                            <!-- <li class="rnum" id='5'>SR#5</li>
-                            <li class="rnum" id='6'>SR#6</li>
-                            <li class="rnum" id='7'>SR#7</li>
-                            <li class="rnum" id='8'>SR#8</li>
-                            <li class="rnum" id='9'>SR#9</li> -->
-                        </div>
-                        </form>
-
-                </div>
-                <div class="timetable">
-                    <table id="table">
-                        <tr draggable="true">
+                <div class="timetable" class="table-bordered">
+                    <table id="table" class="table table-striped">
+                        <tr >
                             <th>TIME</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th>
                         </tr>
-
-                        <tr id="tr">
-                            <td>time</td>
+                        <tr id="room1">
+                            <td>room1</td>
+                        </tr>
+                        <tr id="room2">
+                            <td>room2</td>
+                        </tr>
+                        <tr id="room3">
+                            <td>room3</td>
+                        </tr>
+                        <tr id="room4">
+                            <td>room4</td>
+                        </tr>
+                        <tr id="room5">
+                            <td>room5</td>
+                        </tr>
+                        <tr id="room6">
+                            <td>room6</td>
+                        </tr>
+                        <tr id="room7">
+                            <td>room7</td>
+                        </tr>
+                        <tr id="room8">
+                            <td>room8</td>
+                        </tr>
+                        <tr id="room9">
+                            <td>room9</td>
                         </tr>
                     </table>
+                </div>
+
+                <div>
+                    <input type="text" id="datepicker">
+                    <button id="search"> 조회 </button>
                 </div>
             </div>
         <br>
             <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        <button type="button" id="reser"class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
           예약하기
         </button>
 

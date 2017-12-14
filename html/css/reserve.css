@@ -1,122 +1,42 @@
+body{
+
+}
 nav{
     height: 65em;
     background-image: none;
 /*    background-color: rgb(66, 135, 209);*/
-    
-}
-.nav-content-inner ul{
-    list-style: none;
-    width: 100%;
-    height: 3em;
-    
-}
 
+}
 .nav-content-inner{
     padding-right: 2.5%;
     padding-left: 2.5%
 }
 
-.room{
-    background-color:  #666;
-    margin-bottom: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    height: 30em;
-    border: 10px solid rgb(77, 53, 39);
-    border-radius: 15px;
-    /* background-color: white; */
-}
 
-.broom, .sroom{
-    width: 150em;
-    float: left;
-    margin-bottom: 1%;
-}
-.broom{
-    margin-top: 1%;
-    margin-bottom: 5%;
-}
-
-
-.rnum {
-    height: 10em;
-    width: 15em;
-    float: left;
-    border: 10px solid rgb(77, 53, 39);
-    border-radius: 20px;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    text-align: center;
-    color: black;
-    /*background-color: black;*/
-}
-
-
-/*button:not(#submit){
-
-}*/
-
-
-.broom .rnum{
-    /* float: right; */
-    margin-right: 5%;
-}
-
-
-.broom .froom {
-    margin-left: 3%;
-    margin-right: 17%;
-}
-
-.sroom{
-    margin-left: 12%;
-}
-
-.sroom .rnum{
-    margin-left: 5%;
-}
-
-table{
+#table{
     /* border: 10px solid rgb(77, 53, 39); */
     border-radius: 20px;
-    margin-top: 9em;
-    width: 100%;
-}
-
-th,td{
-    text-align: center;
-    line-height: 2em;
-    width: 20px;
-    height: 4em;
-}
-
-td{
-    padding: 5px 10px;
-    height: 5em;
-}
-
-th{
-    /* border-right: 1px solid rgb(77, 53, 39); */
-    
-    background: #666;
+    width: 70%;
     color: black;
-    padding: 5px 10px;
+    float: left;
+    /*margin-right: 20%;*/
 }
 
-td:first-child{
-    background: #666;
-    color: white;
-    padding: 5px 10px;
+#datepicker{
+    color: black;
+}
+#reser{
+    margin-top: 15em;
 }
 
-/*td:not(:first-child):hover{
-    cursor: pointer;
-    background-color: beige;
-    color: white;
-    opacity: 30%;
-}*/
+td:not(:first-child){
+    background-color: green;
+}
 
-.select{
-    background-color: bisque;
+.reserve{
+    background-color: orange;
+}
+
+#table>tr:first-child{
+    text-align: center;
 }

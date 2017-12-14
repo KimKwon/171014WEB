@@ -1,54 +1,51 @@
 <?php
 
-$delay = 0;
-
-
-
 try {
+    $room = array();
+    $date = $_POST["date"];
 
 
-    if (isset($_REQUEST["delay"])) {
-    	$delay = max(0, min(60, (int) filter_chars($_REQUEST["delay"])));
+    for($h=1;$h<=9;$h++){
+        $query = "SELECT reserve_time , reserve_period FROM reservation WHERE reserve_room_no = $h AND reserve_date = '$date' ";
+        $db = new PDO("mysql:dbname=smash", "root", "root");
+        $rows = $db->query($query);
+        $time= array();
+        // print "$query";
+
+
+        foreach($rows as $row) {
+            $start = $row["reserve_time"];
+            $end = $start + $row["reserve_period"];
+            for($j=$start;$j<$end;$j++){
+                array_push($time, $j);
+            }
+
+        }
+        $room[$h] = $time;
     }
+    // print_r ($room[1]);
 
-    if ($delay > 0) {
-    	sleep($delay);
-    }
-
-    $room_no = $_GET["room_number"];
-    $query = "SELECT reserve_time FROM reservation WHERE reserve_room_no = $room_no";
-    $db = new PDO("mysql:dbname=smash", "root", "root");
-    $rows = $db->query($query);
-    $time_table = array();
-    for($i = 0; $i < 20; $i++) {
-        $time_table[$i] = "possible";
-    }
-    foreach($rows as $row) {
-        $time_table[$row["reserve_time"]] = "impossible";
-    }
-
-    // header("Content-type: application/json");
-    // print "{\n  \"times\": [\n";
-    // for($i = 9; $i < 20; $i++) {
-    //     if($i != 9) { print ",\n"; }
-    //     $status = $time_table[$i];
-    //     print "{\"time\": $i, \"status\": \"$status\"}";
-    //     if($i == 19) { print "\n"; }
-    // }
-    // print "  ]\n}\n";
     $xmldoc = new DOMDocument();
-    $times_tag = $xmldoc->createElement("times"); //<times>
-    $times_tag -> setAttribute("room",$room_no);
-    for ($i=9; $i < 20 ; $i++) {
-        $time_tag = $xmldoc->createElement("time"); //<time>
-        $time_tag->setAttribute("t", $i);
-        $time_tag->setAttribute("st", $time_table[$i]);
-        $times_tag->appendChild($time_tag);
+    $Smash_tag = $xmldoc->createElement("Smash"); //<times>
+    for($j=1;$j<=9;$j++){
+        // $j=1;
+        $room_tag = $xmldoc->createElement("room");
+        $room_tag -> setAttribute("room", "room$j");
+        // print $room[$j][0];
+
+        foreach ($room[$j] as $value) {
+            $temp = $value;
+            $reser_time_tag = $xmldoc-> createElement("time");
+            $reser_time = $xmldoc -> createTextNode($temp);
+            $reser_time_tag -> appendChild( $reser_time );
+            $room_tag -> appendChild($reser_time_tag);
+        }
+        $Smash_tag -> appendChild($room_tag);
     }
-    $xmldoc -> appendChild($times_tag);
+    $xmldoc -> appendChild($Smash_tag);
     header("Content-type: text/xml");
     print $xmldoc->saveXML();
-
+    // print $date;
 
 
 

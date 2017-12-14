@@ -92,7 +92,6 @@ function show_time(ajax) {
     var times = ajax.responseXML.getElementsByTagName("times");
     var time = times[0].getElementsByTagName("time");
     // var li = document.createElement("li");
-    $("tr").innerHTML = "<td>#"+times[0].getAttribute("room")+"</td>";
     for(var i = 0; i < time.length; i++) {
         var td = document.createElement("td");
         // td.innerHTML = data.times[i].status + "!";

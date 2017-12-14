@@ -1,63 +1,65 @@
- "use strict";
+jQuery.noConflict();
+var j$ = jQuery;
 
+var date = new Date();
+var year = date.getFullYear();
+var month = new String(date.getMonth()+1);
+var day = new String(date.getDate());
 
-var numofcheck =0;
+// 한자리수일 경우 0을 채워준다.
+if(month.length == 1){
+  month = "0" + month;
+}
+if(day.length == 1){
+  day = "0" + day;
+}
+
+var today = year + "-" + month + "-" + day;
+// [출처] 자바스크립트 오늘날짜 구하기 (YYYYMMDD)|작성자 히키코보라
+
+$( function() {
+  j$( "#datepicker" ).datepicker({
+      changeMonth: false,
+      changeYear: false,
+      dateFormat: 'yy-mm-dd',
+      minDate: 'today',
+      maxDate: 'today'+7,
+  });
+
+});
 
 window.onload = function() {
 
-    var time = $$("td:not(:first-child)");
-    for(var i=0;i<time.length; i++){
-        time[i].observe("click",select);
-    }
+    $("datepicker").value= today;
 
-    
+    var date = $("datepicker").value;
 
+    $("search").observe('click',function(){
+      new Ajax.Request("show_time_table.php",{
+    //     method: "POST",
+        parameters: {date: date },
+        onSuccess: show_time,
+      });
+    });
 
-//    $("submit").onclick=function(){
-//            new Ajax.Request("register_info.php", {
-//                method: "get",
-//                parameters:{ reserve_date : reserve(), room_number :   },
-//                onSuccess: success,
-//                onFailure: Fail,
-//                onException: Fail
-//            });
-//    };
+    j$('#myModalLabel').css("color","black");
+    j$('.modal-body').css("color","black");
 };
 
-function select(event){
-    if(event.target.hasClassName("select")){
-        event.target.removeClassName("select");
-        numofcheck = numofcheck - 1;
-    }
-    else{
-        if(numofcheck >= 2){
-            alert("하루에 두시간 이상 예약 하실 수 없으십니다.");
+
+
+function show_time(ajax) {
+    // alert(ajax.responseText);
+    var Smash = ajax.responseXML.getElementsByTagName("Smash");
+    var room = Smash[0].getElementsByTagName("room");
+    alert( room.length);
+    for(var i = 0; i < room.length; i++) { // 방 1개당 1번 도는 for문
+        var td = document.createElement("td");
+        var room_num = room[i].getAttribute("room"); // 방의 아이디를 가져오고
+        var time = room[i].getElementsByTagName("time");
+        for(var j = 9; j<=19; j++){
+            
         }
-        else{
-                event.target.addClassName("select");
-             numofcheck = numofcheck + 1;
-        }
     }
-}
-
-//function room(){
-//
-//}
-
-//function reserve(){
-//    var select
-//    var time = $$("time");
-//    for(var i=0;i<time.length; i++){
-//        if(time[i].hasClassName("select")){
-////            select.push(i);
-//            select = i;
-//        }
-//    }
-//}
-
-function success(){
-    alert(ajax.responseText);
-}
-function Fail(){
-    alert("실패");
+    // alert("이러고 바로 돌아감;");
 }
