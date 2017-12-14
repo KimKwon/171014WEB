@@ -25,7 +25,7 @@
     <script type="text/javascript">
       jQuery.noConflict();
       var j$ = jQuery;
-    </script>    
+    </script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js" type="text/javascript"></script>
 
@@ -53,7 +53,7 @@
                         <source src="video/head3.mp4" type="video/mp4">
                     </video>
                     <div id="polina">
-                        <div class="smash">    
+                        <div class="smash">
                             <h1>SMASH</h1>
                         <div class="sclock">
                             <p class = "clock"></p>
@@ -66,7 +66,7 @@
                                 <a href="signup.html"><button class="greenButton">sign up</button></a>
                                 <a href="signin.html"><button class="greenButton">sign in</button></a>
                             </div>
-                        <div>  
+                        <div>
                     </div>
                 </div> <!-- class="nav-content-inner" -->
             </div> <!-- class="nav-content" -->
@@ -127,7 +127,7 @@
             <div class="dropdown-content">
                 <a href="mypage.php">my page</a>
                         </div>
-    
+
 
         <nav>
             <div class="nav-content">
@@ -135,11 +135,11 @@
                 <video autoplay loop id="video-background" muted plays-inline>
                     <source src="video/head3.mp4" type="video/mp4">
                 </video>
-                
+
                     <div id="polina">
-                        <div class="smash">    
+                        <div class="smash">
                             <h1>SMASH</h1>
-                        
+
                         <div class="sclock">
                             <p class = "clock"></p>
                         </div>
@@ -149,8 +149,8 @@
                                 <li><a href="mypage.php">My Page</a></li>
                                 <li><a href="reserve.html">Reservation</li>
                                 <li><a href="logout.php">Log out</li>
-                            </ul>    
-                        <div>  
+                            </ul>
+                        <div>
                     </div>
                 </div> <!-- class="nav-content-inner" -->
             </div> <!-- class="nav-content" -->
@@ -209,6 +209,6 @@
     <?php
         }
 ?>
-            
-    
+
+
 </body>

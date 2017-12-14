@@ -29,14 +29,18 @@ nav{
     margin-top: 15em;
 }
 
-td:not(:first-child){
-    background-color: green;
+#table .room_time .reserve{
+    background-color: #996633;
 }
 
-.reserve{
-    background-color: orange;
+.room_time td:not(:first-child){
+    background-color: yellowgreen;
 }
 
-#table>tr:first-child{
+#table .room_time .choose{
+    background-color: black;
+}
+
+#table tr:first-child{
     text-align: center;
 }

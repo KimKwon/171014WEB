@@ -54,37 +54,28 @@
     <nav>
         <div class="nav-content">
             <div class="nav-content-inner">
-                <div class="timetable" class="table-bordered">
-                    <table id="table" class="table table-striped">
+                <div class="timetable"  >
+                    <table id="table"  class="table table-striped">
                         <tr >
                             <th>TIME</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th>
                         </tr>
-                        <tr id="room1">
-                            <td>room1</td>
+                        <tr class="room_time" id="room1">
                         </tr>
-                        <tr id="room2">
-                            <td>room2</td>
+                        <tr class="room_time" id="room2">
                         </tr>
-                        <tr id="room3">
-                            <td>room3</td>
+                        <tr class="room_time" id="room3">
                         </tr>
-                        <tr id="room4">
-                            <td>room4</td>
+                        <tr class="room_time" id="room4">
                         </tr>
-                        <tr id="room5">
-                            <td>room5</td>
+                        <tr class="room_time" id="room5">
                         </tr>
-                        <tr id="room6">
-                            <td>room6</td>
+                        <tr class="room_time" id="room6">
                         </tr>
-                        <tr id="room7">
-                            <td>room7</td>
+                        <tr class="room_time" id="room7">
                         </tr>
-                        <tr id="room8">
-                            <td>room8</td>
+                        <tr class="room_time" id="room8">
                         </tr>
-                        <tr id="room9">
-                            <td>room9</td>
+                        <tr class="room_time" id="room9">
                         </tr>
                     </table>
                 </div>
@@ -110,9 +101,10 @@
               </div>
               <div class="modal-body">
                 <form action="register_info.php" method='post'>
+                <?php $date = $_GET["date"]?>
                 <div class="form-group">
                     <label class="control-label">사용 날짜:</label><br>
-                    <input type="date" name='date' class="form-control" id="form_date">
+                    <input type="date" name='date' class="form-control" id="form_date" value="<?php $date ?>">
                     <br>
                     <label class="control-label">사용 시간:</label><br>
                     <select class="form-control" name="date_time" multiple>
