@@ -27,8 +27,6 @@
         <ul>
             <a href="index.php">Ordinary Colleage Students</a>
             <li><a href="reserve.html">Reservation</a></li>
-            <li><a href="contactus.html">Contact us</a></li>
-            <!-- <li><a href="aboutus.html">About us</a></li> -->
             <li class="dropdown">
                 Log out
                 <div class="dropdown-content">
@@ -41,10 +39,9 @@
     </header>
     <nav>
 
-
         <div class="nav-content">
-            <!-- <div class="nav-content-inner"> -->
-                <!-- <div class="info"> -->
+            <div class="nav-content-inner">
+                <div class="info">
                     <?php
                     if($_SESSION["status"] == "log_in") {
                         $user_id = $_SESSION["id"];
@@ -52,35 +49,34 @@
                         $db = new PDO("mysql:dbname=smash", "root", "root");
                         $rows = $db->query($query);
                     ?>
-                        <h1>'<?= $user_id ?>' 님의 My Page</h1>
-                        <div class = "wrapper">
-                            <ul class = "sq clearfix">
-                                <li class = "sq-item sq-item-large">
-                                    <p class = "sq-item-anchor" > 예약확인</br><span>여기에 학생정보좀</span></p>
-
-                                </li>
-
-                                <li class = "sq-item">
-                                    <a class = "sq-item-anchor" href=""> 예약확인 </a>
-                                </li>
-                                <li class = "sq-item">
-                                    <a class = "sq-item-anchor" href=""> 예약관리 </br><span>여러분의 예약을 관리해드립니다.</span></a>
-                                </li>
-                                <li class = "sq-item ">
-                                    <a class = "sq-item-anchor" href="modify_info.php"> 개인정보수정 </br><span>여러분의 개인정보를 수정해드립니다.</span></a>
-                                </li>
-                                <li class = "sq-item">
-                                <a class = "sq-item-anchor" href=""> 위시리스트 </br><span>어떤 날짜와 시간을 희망하셨나요?</span></a>
-                                </li>
-                            </ul>
-                        </div>
+                        <h2>#<?= $user_id ?>님의 My Page</h2>
+                        <div class="grid">
+                        <ul id="Grid">
+                            <li>학생정보
+                                <div class = "infor">    
+                                    <p>이름써주시고</p> <p>학번써주시구</p> <p>학과써주세요</p>
+                                </div>           
+                                <div class="bt">
+                                    <a href=""><button>회원정보수정</button></a>
+                                <div>
+                            </li>
+                            <li>예약확인
+                                <div class = "infor">
+                                    <p>방번호써주시고</p> <p>예약날짜써주시고</p> <p>시간써주세요</p>
+                                </div>
+                                <div class="bt">
+                                    <a href=""><button>예약변경</button></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                     <?php
                     } else {
                         echo("<script>location.replace('index.php');</script>");
                     }
                     ?>
-                <!-- </div> -->
-            <!-- </div> -->
+                </div>
+            </div>
         </div>
 
     </nav>

@@ -6,12 +6,13 @@ html, body {
     margin: 0;
     padding: 0;
 }
+/* 시간 */
 .clock{
   font-size: 100px;
 }
 body {
     margin: 0;
-    background: #FFF;
+    background: rgb(255, 255, 255);
 }
 video { 
     /* opacity: 0.7; */
@@ -37,7 +38,7 @@ video {
     float: left;
     padding-left: 5em;
     padding-top: 3em;
-    padding-left: 2em;
+    padding-right: 2em;
 }
 .sclock{
     margin-top: 2em;
@@ -47,17 +48,40 @@ video {
     padding-top: 8em;
     padding-left: 30em;
 }
+#afterlogin{
+    width: 65%;
+    padding-top: 8em;
+    padding-left: 30em;
+}
+#afterlogin a{
+    color: rgb(77, 53, 39);
+
+}
+#afterlogin a:visited{
+    color: rgb(77, 53, 39);
+    
+}
+
+#afterlogin li{
+    list-style: none;
+    padding-bottom: 2em;
+    color: rgb(77, 53, 39);
+    font-size: 40px;
+}
 #polina { 
     background-color: rgba(255,255,255,.7);
-  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
-  font-weight:100; 
-  color: white;
-  padding: 2rem;
-  width: 90%;
-  height: 35em;
-  margin:2rem;
-  font-size: 1.2rem;
-  margin: auto;
+    font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+    font-weight:100; 
+    color: white;
+    padding: 2rem;
+    width: 90%;
+    height: 35em;
+    margin:2rem;
+    font-size: 1.2rem;
+    margin: auto;
+}
+#polina h1{
+    font-size: 220px;
 }
 
 h1 {
@@ -86,9 +110,9 @@ h1 {
    background: rgba(0,0,0,0.5);
 }
 
-#polina a:hover{
+/* #polina a:hover{
   background:rgba(0,0,0,0.9);
-}
+} */
 @media screen and (max-width: 500px) { 
   div{width:70%;} 
 }
@@ -144,7 +168,7 @@ nav .nav-content {
 nav .nav-content .nav-content-inner h1 {
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 220px;
+    font-size: 10em;
     font-weight: 300;
     color:rgb(77, 53, 39);
     height: 100%;

@@ -1,13 +1,32 @@
 /*reset, basic*/
-body,ul{
+body{
     margin: 0;
     padding: 0;
 }
+
+/* header a:visited{
+    color: rgb(77, 53, 39);
+} */
+nav h2{
+    font-size: 50px;
+    font-weight: 300;
+    color:rgb(77, 53, 39);
+}
+
+li{
+    /* border-bottom: 1px solid rgb(77, 53, 39); */
+    /* display: inline-block; */
+    list-style: none;
+    margin-top: 18px;
+    height: 100%;
+}
 nav{
     background-image: none;
+    /* background-color: #eee; */
 }
 li{
-    list-style-type: none;
+    color: rgb(77, 53, 39);
+    list-style: none;
 }
 a{
     color:inherit;
@@ -18,77 +37,108 @@ span{
     z-index: 30;
     position: relative;
 }
-.clearfix::after{
-    
-    content: ' ';
+
+div, ul, li{
+    list-style-type: none;
+  }
+  
+  /* -- FLUID GRID STYLES -- */
+
+#Grid{
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 1;
+    margin: 0;
+    padding: 0;
+}
+.infor{
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+.bt button { 
     display: block;
-    clear: both;
-}
-
-.wrapper{
-    padding: 10px;
-    /* background-color: #111; */
-    color: white;
-    width: 800px;
-    margin : 100px auto;
-}
-.sq{
-    color: white;
-    /* background-color:#111; */
-    /* overflow: hidden; */
-    padding:1rem;
-    /* height: auto; */
-}
-.sq-item{
-    float:left;
-    width: 25%;
-    padding-top: 25%;
-    position: relative;
-}
-.sq-item-anchor{
-    background-color: rgb(175, 94, 148);
-    position: absolute;
-    left:0;
-    top:0;
-    right: 0;
-    bottom: 0;
-    width:100px;
-    height:100px;
-    margin: 1rem;
-    padding: 1.5rem;
-    border-radius: 10px;
-    transition: all 1s;
-    border: 0 solid white;
-    
-    font-size: 1.3rem;
-}
-.sq-item-long{
-    padding-top:75%;   
-}
-.sq-item-float-right{
-    float: right;
-}
-.sq-item-large{
     width: 50%;
-    padding-top:50%;
+    padding: .8rem;
+    border: none; 
+    margin: 1rem auto; 
+    font-size: 1.3rem;
+    background: rgb(73, 73, 73);
+    color: #fff;
+    border-radius: 3px; 
+    cursor: pointer;
+    transition: .3s background;
+  }
+.bt  a{
+    text-decoration: none;
+}
+.bt button:hover { 
+   background: rgba(0,0,0,0.5);
 }
 
-.sq-item-anchor:hover{
-    margin: -1.5rem;
-    transform: scale(1.1); 
-    z-index: 30;
-    border: 20px solid white;
-    border-width: 10px;
-    font-size:2rem;
-    
+.bt a:hover{
+  background:rgba(0,0,0,0.9);
 }
-.sq-item-anchor-cover{
-    position: absolute;;
-    left: 0;
-    top:0;
-    z-index: 10;
+#Grid li{
+    /* text-align: center; */
+    font-size: 2em;
+    display: inline-block;
+    background: rgba(77, 53, 39, 0.4);
+    width: 20%;
+    height: 1em;
+    padding-top: 2em;
+    padding-right: 5em;
+    padding-left: 5em;
+    padding-bottom: 14em;
 }
-.sq-item-anchor-title{
-    position: relative;
-    z-index: 20;
+#Grid p{
+    font-size: 0.7em;
 }
+
+  /* -- MEDIA QUERIES DEFINING RESPONSIVE LAYOUTS -- */
+  
+  /* 3 COL */
+  
+  @media (max-width: 800px){
+    #Grid li{
+      width: 31%;
+      padding-top: 31%;
+      margin-bottom: 3%;
+    }
+  }
+  
+  /* 2 COL */
+  
+  @media (max-width: 600px){
+    #Grid li{
+      width: 48%;
+      padding-top: 48%;
+      margin-bottom: 4%;
+    }
+  }
+  
+  /* SINGLE COL */
+  
+  @media (max-width: 400px){
+    #Grid li{
+      width: 100%;
+      padding-top: 100%;
+      margin-bottom: 5%;
+    }
+  }
+  
+  
+  /* -- LEGEND STYLES (NOT PART OF GRID FRAMEWORK) -- */
+  
+  h1{
+    font: 600 20px "Helvetica Neue";
+    text-align: right;
+    text-transform: uppercase;
+  }
+  
+  
+nav p{
+    font: 200 15px/1.5em "Helvetica Neue";
+    max-width: 400px;
+    margin-bottom: 30px;
+    color: #333;
+  }
