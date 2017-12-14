@@ -49,6 +49,7 @@ video {
     padding-left: 30em;
 }
 #afterlogin{
+    width: 65%;
     padding-top: 8em;
     padding-left: 30em;
 }
@@ -63,7 +64,7 @@ video {
 
 #afterlogin li{
     list-style: none;
-    padding-bottom: 5em;
+    padding-bottom: 2em;
     color: rgb(77, 53, 39);
     font-size: 40px;
 }
@@ -109,9 +110,9 @@ h1 {
    background: rgba(0,0,0,0.5);
 }
 
-#polina a:hover{
+/* #polina a:hover{
   background:rgba(0,0,0,0.9);
-}
+} */
 @media screen and (max-width: 500px) { 
   div{width:70%;} 
 }

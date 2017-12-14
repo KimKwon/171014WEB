@@ -148,6 +148,7 @@
                             <ul>
                                 <li><a href="mypage.php">My Page</a></li>
                                 <li><a href="reserve.html">Reservation</li>
+                                <li><a href="logout.php">Log out</li>
                             </ul>    
                         <div>  
                     </div>
