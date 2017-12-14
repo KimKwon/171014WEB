@@ -6,6 +6,9 @@ html, body {
     margin: 0;
     padding: 0;
 }
+.clock{
+  font-size: 100px;
+}
 body {
     margin: 0;
     background: #FFF;
@@ -32,12 +35,17 @@ video {
 }
 .smash{
     float: left;
-    padding-top: 9em;
+    padding-left: 5em;
+    padding-top: 3em;
     padding-left: 2em;
+}
+.sclock{
+    margin-top: 2em;
+    margin-bottom: 10em;
 }
 .forsmash{
     padding-top: 8em;
-    padding-left: 40em;
+    padding-left: 30em;
 }
 #polina { 
     background-color: rgba(255,255,255,.7);
@@ -59,10 +67,9 @@ h1 {
   letter-spacing: .3rem;
 }
 #polina button { 
-
   display: block;
   width: 50%;
-  padding: .4rem;
+  padding: .8rem;
   border: none; 
   margin: 1rem auto; 
   font-size: 1.3rem;
@@ -137,7 +144,7 @@ nav .nav-content {
 nav .nav-content .nav-content-inner h1 {
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 250px;
+    font-size: 220px;
     font-weight: 300;
     color:rgb(77, 53, 39);
     height: 100%;

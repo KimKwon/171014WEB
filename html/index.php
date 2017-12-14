@@ -25,20 +25,17 @@
     <script type="text/javascript">
       jQuery.noConflict();
       var j$ = jQuery;
-    </script>
+    </script>    
 
     <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js" type="text/javascript"></script>
 
-    <script type="text/javascript" src="js/time.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 
 
 
 </head>
 
 <body>
-    <div class="clock">
-      <p><span id='clocker'></span></p>
-    </div>
     <!-- <button type="button" id="fold" name="button">접기</button> -->
     <?php
         if(!isset($_SESSION["status"])) { $_SESSION["status"] = "log_out"; }
@@ -72,7 +69,11 @@
                 
                     <div id="polina">
                         <div class="smash">    
-                        <h1>SMASH</h1>
+                            <h1>SMASH</h1>
+                        
+                        <div class="sclock">
+                            <p class = "clock"></p>
+                        </div>
                         </div>
                         <div class="forsmash">
                             <p>For Smash Reservation</p>
