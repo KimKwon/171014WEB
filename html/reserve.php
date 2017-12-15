@@ -59,6 +59,8 @@
                         <tr >
                             <th>TIME</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th>
                         </tr>
+                        <tr class="room_time" id="room0">
+                        </tr>
                         <tr class="room_time" id="room1">
                         </tr>
                         <tr class="room_time" id="room2">
@@ -74,8 +76,6 @@
                         <tr class="room_time" id="room7">
                         </tr>
                         <tr class="room_time" id="room8">
-                        </tr>
-                        <tr class="room_time" id="room9">
                         </tr>
                     </table>
                 </div>
@@ -106,12 +106,15 @@
                 <form action="register_info.php" method='post'>
                 <?php $date = $_GET["date"]?>
                 <div class="form-group">
-                    <label class="control-label">사용 날짜:</label><br>
+                    <label class="control-label">사용 날짜:</label>
                     <input type="date" name='date' class="form-control" id="form_date" >
                     <br>
-                    <label class="control-label">사용 시간:</label><br>
-                    <select class="form-control" name="date_time" multiple>
-                      <optgroup label="사용 시간 선택">
+                    <label class="control-label">방 번호:</label>
+                    <input type="text" name='reserve_room_no' class="form-control" id="reserve_room_no">
+                    <br>
+                    <label class="control-label">사용 시간:     </label>
+                    <!-- <select class="form-control" name="date_time" multiple> -->
+                      <!-- <optgroup label="사용 시간 선택">
                         <option value="9">AM 09:00</option>
                         <option value="10">AM 10:00</option>
                         <option value="11">AM 11:00</option>
@@ -123,14 +126,25 @@
                         <option value="17">AM 17:00</option>
                         <option value="18">AM 18:00</option>
                         <option value="19">AM 19:00</option>
-                      </optgroup>
-                    </select>
+                      </optgroup> -->
+                      <div class="using_time">
+                          <input type="text" name="reserve_time" class="form-control" id="reserve_time" >
+                      </div>
+                      <div class="using_time">
+                          <h2>~</h2>
+                      </div>
+                      <div class="using_time">
+                          <input type="text" name="reserve_end" class="form-control" id="reserve_end" >
+                      </div>
+
+                    <!-- </select> -->
                     <br>
                     <label class="control-label">사용 목적:</label><br>
                     <input type="text" name='purpose' class="form-control" id="form_purpose">
                     <br>
                     <label class="control-label">사용 인원:</label><br>
                     <textarea name='population' class="form-control" id="form_population"></textarea>
+                    <input type="hidden" name="reserve_period" id="reserve_period">
                   </div>
 
               </div>
