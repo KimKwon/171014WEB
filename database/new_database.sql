@@ -20,7 +20,7 @@ create table reservation(
 	population integer not null
 );
 
-alter table reservation add primary key(reserve_date, reserve_room_no);
+alter table reservation add primary key(reserve_room_no, reserve_date, reserve_time);
 
 alter table reservation add foreign key(id) references user_info(user_id);
 
