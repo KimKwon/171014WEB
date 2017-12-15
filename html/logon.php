@@ -7,7 +7,7 @@
 		$db = new PDO("mysql:dbname=smash;host:localhost","root","root");
 		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$db->exec("INSERT INTO user_info(user_id,user_pw,user_email) values ('$us_id','$us_pw','$us_email');");
+		$db->exec("INSERT INTO user_info(user_id,user_pw,user_email) values ('$us_id','$us_pw','$us_email', null, null);");
 ?>
 		<script type="text/javascript">
 			alert("가입이 완료되었습니다 <?=$us_id?> 님!");
