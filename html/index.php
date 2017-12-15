@@ -55,9 +55,9 @@
                     <div id="polina">
                         <div class="smash">
                             <h1>SMASH</h1>
-                        <div class="sclock">
-                            <p class = "clock"></p>
-                        </div>
+                            <div class="sclock">
+                                <p class = "clock"></p>
+                            </div>
                         </div>
                         <div class="forsmash">
                             <p>For Smash Reservation</p>
@@ -66,49 +66,49 @@
                                 <a href="signup.html"><button class="greenButton">sign up</button></a>
                                 <a href="signin.html"><button class="greenButton">sign in</button></a>
                             </div>
-                        <div>
+                        </div>
                     </div>
                 </div> <!-- class="nav-content-inner" -->
             </div> <!-- class="nav-content" -->
         </nav>
-    <div> <!-- id="full" -->
+    </div> <!-- id="full" -->
 
     <section class="seccolor">
         <div id="all">
-        <div class="front">
-            <div class = "boxing">
-            <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+            <div class="front">
+                <div class = "boxing">
+                    <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
                             <h3>윤가영</h3>
                             <strong class="role">Web Designer</strong>
                             <p>Front 입니다</p>
-            </div >
-            <div class = "boxing">
-            <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+                </div>
+                <div class = "boxing">
+                    <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
                             <h3>한건희</h3>
                             <strong class="role">Web Designer</strong>
                             <p>Front 입니다</p>
-            </div>
-        </div> <!-- class="front" -->
-        <div class="back">
-            <div class = "boxing">
-            <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
-                            <h3>권혁진</h3>
-                            <strong class="role">Coder</strong>
-                            <p>Back 입니다.</p>
-            </div>
-            <div class = "boxing">
-            <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
-                            <h3>박현준</h3>
-                            <strong class="role">Coder</strong>
-                            <p>Back 입니다.</p>
-            </div>
-            <div class = "boxing">
-            <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
-                        <h3>배성훈</h3>
-                            <strong class="role">Coder</strong>
-                            <p>Back 입니다.</p>
-            </div>
-        </div> <!-- class="back" -->
+                </div>
+            </div> <!-- class="front" -->
+            <div class="back">
+                <div class = "boxing">
+                    <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+                                <h3>권혁진</h3>
+                                <strong class="role">Coder</strong>
+                                <p>Back 입니다.</p>
+                </div>
+                <div class = "boxing">
+                    <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+                                <h3>박현준</h3>
+                                <strong class="role">Coder</strong>
+                                <p>Back 입니다.</p>
+                </div>
+                <div class = "boxing">
+                    <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+                            <h3>배성훈</h3>
+                                <strong class="role">Coder</strong>
+                                <p>Back 입니다.</p>
+                </div>
+            </div> <!-- class="back" -->
         </div> <!-- id="all" -->
     </section>
     <footer class="intro">
@@ -126,7 +126,7 @@
 ?>
             <div class="dropdown-content">
                 <a href="mypage.php">my page</a>
-                        </div>
+            </div>
 
 
         <nav>
@@ -140,59 +140,63 @@
                         <div class="smash">
                             <h1>SMASH</h1>
 
-                        <div class="sclock">
-                            <p class = "clock"></p>
-                        </div>
+                            <div class="sclock">
+                                <p class = "clock"></p>
+                            </div>
                         </div>
                         <div id="afterlogin">
                             <ul>
                                 <li><a href="mypage.php">My Page</a></li>
-                                <li><a href="reserve.html">Reservation</li>
-                                <li><a href="logout.php">Log out</li>
+                                <li><a href="reserve.html">Reservation</a></li>
+                                <li><a href="logout.php">Log out</a></li>
                             </ul>
-                        <div>
+                        </div>
                     </div>
                 </div> <!-- class="nav-content-inner" -->
             </div> <!-- class="nav-content" -->
         </nav>
-    <div> <!-- id="full" -->
+    </div> <!-- id="full" -->
 
     <section class="seccolor">
         <div id="all">
-        <div class="front">
-            <div class = "boxing">
-            <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+            <div class="front">
+                <div class = "boxing">
+                    <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
                             <h3>윤가영</h3>
                             <strong class="role">Web Designer</strong>
                             <p>Front 입니다</p>
-            </div >
-            <div class = "boxing">
-            <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+                </div>
+
+                <div class = "boxing">
+                    <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
                             <h3>한건희</h3>
                             <strong class="role">Web Designer</strong>
                             <p>Front 입니다</p>
-            </div>
-        </div> <!-- class="front" -->
-        <div class="back">
-            <div class = "boxing">
-            <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+                </div>
+            </div> <!-- class="front" -->
+
+            <div class="back">
+                <div class = "boxing">
+                    <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
                             <h3>권혁진</h3>
                             <strong class="role">Coder</strong>
                             <p>Back 입니다.</p>
-            </div>
-            <div class = "boxing">
-            <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+
+                </div>
+                <div class = "boxing">
+                    <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
                             <h3>박현준</h3>
                             <strong class="role">Coder</strong>
                             <p>Back 입니다.</p>
-            </div>
-            <div class = "boxing">
-            <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+                </div>
+
+                <div class = "boxing">
+                    <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
                         <h3>배성훈</h3>
                             <strong class="role">Coder</strong>
                             <p>Back 입니다.</p>
-            </div>
-        </div> <!-- class="back" -->
+                </div>
+            </div> <!-- class="back" -->
         </div> <!-- id="all" -->
     </section>
     <footer class="intro">
