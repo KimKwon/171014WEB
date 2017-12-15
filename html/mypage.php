@@ -26,7 +26,7 @@
     <header>
         <ul>
             <a href="index.php">Ordinary Colleage Students</a>
-            <li><a href="reserve.html">Reservation</a></li>
+            <li><a href="reserve.php">Reservation</a></li>
             <li class="dropdown">
                 Log out
                 <div class="dropdown-content">
@@ -53,7 +53,7 @@
                         <div class="grid">
                         <ul id="Grid">
                             <li>학생정보
-                                <div class = "infor">    
+                                <div class = "infor">
                                     <?php foreach($rows as $row) { ?>
                                         <p>이름: <?= $row["user_id"] ?></p>
                                         <?php if($row["student_id"] == null) {?> <p>등록된 학번이 없습니다.</p>

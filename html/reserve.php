@@ -104,16 +104,19 @@
               </div>
               <div class="modal-body">
                 <form action="register_info.php" method='post'>
-                <?php $date = $_GET["date"]?>
+                <!-- <?php $date = $_GET["date"]?> -->
                 <div class="form-group">
                     <label class="control-label">사용 날짜:</label>
                     <input type="date" name='date' class="form-control" id="form_date" >
                     <br>
                     <label class="control-label">방 번호:</label>
-                    <p class="form-control-static" id='reserve_room_no'></p>
+                    <br>
+                    <input class="form-control" id="disabledInput" name='reserve_room_no' type="text" placeholder=""  readonly>
+                    <!-- <p class="form-control-static" name='reserve_room_no' id='reserve_room_no'></p> -->
                     <!-- <input type="text" name='reserve_room_no' class="form-control" id="reserve_room_no"> -->
                     <br>
                     <label class="control-label">사용 시간:</label>
+                    <br>
                     <!-- <select class="form-control" name="date_time" multiple> -->
                       <!-- <optgroup label="사용 시간 선택">
                         <option value="9">AM 09:00</option>
@@ -128,8 +131,11 @@
                         <option value="18">AM 18:00</option>
                         <option value="19">AM 19:00</option>
                       </optgroup> -->
+                    <span><input class="form-control" id="disabledInput" name='reserve_time' type="text" placeholder="" value='' readonly></span>
+                    <h4>~</h4>
+                    <span><input class="form-control" id="disabledInput" name='reserve_end' type="text" placeholder="" value='' readonly></span>
 
-                    <p><span class='form-control-static' id='reserve_time'></span>~<span class='form-control-static' id='reserve_end'></span></p>
+                    <!-- <p class='form-control-static'><span class='form-control-static' id='reserve_time' name='reserve_time'></span>~<span class='form-control-static' id='reserve_end'></span></p> -->
                           <!-- <input type="text" name="reserve_time" class="form-control" id="reserve_time" > -->
 
 
@@ -137,10 +143,10 @@
                     <!-- </select> -->
                     <br>
                     <label class="control-label">사용 목적:</label><br>
-                    <input type="text" name='purpose' class="form-control" id="form_purpose">
+                    <input type="text" name='form_purpose' class="form-control" id="form_purpose">
                     <br>
                     <label class="control-label">사용 인원:</label><br>
-                    <select class="form-control" name="" id='form_population' multiple>
+                    <select class="form-control" name="form_population" id='form_population'>
                       <optgroup label="사용 인원 선택">
                         <option value="1">1명</option>
                         <option value="2">2명</option>
@@ -157,7 +163,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-                <button type="submit" class="btn btn-primary">확인</button>
+                <button type="submit" id='hi' class="btn btn-primary">확인</button>
               </div>
               </form>
             </div>

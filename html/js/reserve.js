@@ -58,18 +58,25 @@ window.onload = function() {
     $("reser").observe('click',function(){
         var date = $("datepicker").value;
         $("form_date").value = date ;
-        $("reserve_room_no").innerHTML = parseInt(want_time[0]/12).toString();
-        $("reserve_time").innerHTML = (want_time[0]%12)+8 +" : 00";
-        $("reserve_end").innerHTML = (want_time[want_time.length-1]%12)+9 +" : 00";
+        // $("reserve_room_no").placeholder = parseInt(want_time[0]/12).toString();
+        j$('#disabledInput').attr('placeholder',parseInt(want_time[0]/12).toString());
+        $$('#disabledInput')[0].value = parseInt(want_time[0]/12).toString();
+
+
+        j$('span input#disabledInput').attr('placeholder',(want_time[0]%12)+8 +" : 00");
+        $$('span input#disabledInput')[0].value = (want_time[0]%12)+8 +" : 00";
+        j$('span input#disabledInput[name=\'reserve_end\']').attr('placeholder',(want_time[want_time.length-1]%12)+9 +" : 00");
+        $$('span input#disabledInput[name=\'reserve_end\']')[0].value = (want_time[want_time.length-1]%12)+9 +" : 00";
+        // $("reserve_time").innerHTML = (want_time[0]%12)+8 +" : 00";
+        // $("reserve_end").innerHTML = (want_time[want_time.length-1]%12)+9 +" : 00";
         $("reserve_period").value = want_time.length;
     });
 
 
-// 출처: http://uiandwe.tistory.com/1107 [조아하는모든것]
-
     j$('#myModalLabel').css("color","black");
     j$('.modal-body').css("color","black");
 };
+
 
 $(document).on("click","td",function(){
       var index = j$("td").index(this)
