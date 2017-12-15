@@ -16,10 +16,12 @@ nav{
 #table{
     /* border: 10px solid rgb(77, 53, 39); */
     border-radius: 20px;
-    width: 70%;
+    width: 50%;
     color: black;
+    margin-left: 10em;
+    /*margin-right: auto;*/
     float: left;
-    /*margin-right: 20%;*/
+    margin-bottom: 5em;
 }
 
 #datepicker{
@@ -37,10 +39,26 @@ nav{
     background-color: yellowgreen;
 }
 
+.room_time td:first-child){
+    width: 3em;
+}
+
 #table .room_time .choose{
     background-color: black;
 }
 
 #table tr:first-child{
     text-align: center;
+}
+
+.example{
+    margin-top: 5em;
+}
+.example p{
+    font-size: 20pt;
+    color: black;
+}
+.example_box, p{
+    width: 10em;
+    display: inline-block;
 }

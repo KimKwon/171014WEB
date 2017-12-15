@@ -56,11 +56,9 @@ window.onload = function() {
     });
 
     $("reser").observe('click',function(){
-    var date = $("datepicker").value;
-      new Ajax.Request("reserve.php",{
-        method: "GET",
-        parameters: {date: date , reserve_time : want_time[0], reserve_period : want_time.length }
-      });
+        var date = $("datepicker").value;
+        $("form_date").value = date ;
+        // parameters: {date: date , reserve_time : want_time[0], reserve_period : want_time.length }
     });
 
 
@@ -72,47 +70,49 @@ window.onload = function() {
 
 $(document).on("click","td",function(){
       var index = j$("td").index(this)
-        if(want_time.length == 0){
-            want_time.push( index );
-            this.addClassName("choose");
-        }
-        else{
-            if(want_time.indexOf(index) != -1){
-                if( want_time.indexOf(index) == 0 || want_time.indexOf(index) == want_time.length-1){
-                    want_time.splice(want_time.indexOf(index),1);
-                    this.removeClassName("choose");
-                }
-                else{
-                    // alert(want_time.length);
-                    for(var p=0;p<want_time.length;p++){
-                        if ( want_time[p] != index ) {
-                            j$("td")[ want_time[p]].removeClassName("choose");
-                        }
-                    }
-                    want_time=[];
-                    want_time.push(index);
-                }
+        if(index%12 != 0 && !(j$("td")[index].hasClassName("reserve")) ){
+            if(want_time.length == 0){
+                want_time.push( index );
+                this.addClassName("choose");
             }
             else{
-                if( parseInt((index)/12) == parseInt((want_time[want_time.length-1])/12) ){
-                    //연속된 시간인가
-                    if( (want_time[0]-index == 1 || index - want_time[want_time.length-1] == 1) ){
-                        //같은 방인가
-                        if( want_time[0]>index ){
-                            this.addClassName("choose");
-                            want_time.unshift(index);
-                        }// 맨앞쪽을 선택했을 시
-                        else{
-                            this.addClassName("choose");
-                            want_time.push(index);
-                        }// 뒷 쪽을 선택했을시
+                if(want_time.indexOf(index) != -1){
+                    if( want_time.indexOf(index) == 0 || want_time.indexOf(index) == want_time.length-1){
+                        want_time.splice(want_time.indexOf(index),1);
+                        this.removeClassName("choose");
                     }
                     else{
-                        alert("연속되지 않은 시간은 선택 하실 수 없습니다.");
+                        // alert(want_time.length);
+                        for(var p=0;p<want_time.length;p++){
+                            if ( want_time[p] != index ) {
+                                j$("td")[ want_time[p]].removeClassName("choose");
+                            }
+                        }
+                        want_time=[];
+                        want_time.push(index);
                     }
                 }
                 else{
-                    alert("한번에 두 방을 사용 하실 수 없습니다.")
+                    if( parseInt((index)/12) == parseInt((want_time[want_time.length-1])/12) ){
+                        //연속된 시간인가
+                        if( (want_time[0]-index == 1 || index - want_time[want_time.length-1] == 1) ){
+                            //같은 방인가
+                            if( want_time[0]>index ){
+                                this.addClassName("choose");
+                                want_time.unshift(index);
+                            }// 맨앞쪽을 선택했을 시
+                            else{
+                                this.addClassName("choose");
+                                want_time.push(index);
+                            }// 뒷 쪽을 선택했을시
+                        }
+                        else{
+                            alert("연속되지 않은 시간은 선택 하실 수 없습니다.");
+                        }
+                    }
+                    else{
+                        alert("한번에 두 방을 사용 하실 수 없습니다.")
+                    }
                 }
             }
         }

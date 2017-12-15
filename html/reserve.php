@@ -90,6 +90,9 @@
         <button type="button" id="reser"class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
           예약하기
         </button>
+        <div class="example">
+            <p>Reserved =  </p><div class="example_box" class="brown"></div> <p>Chosen = </p><div class="example_box" class="black"></div> <p>You Can Choose = </p><div class="example_box" class="green"></div>
+        </div>
 
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -104,7 +107,7 @@
                 <?php $date = $_GET["date"]?>
                 <div class="form-group">
                     <label class="control-label">사용 날짜:</label><br>
-                    <input type="date" name='date' class="form-control" id="form_date" value="<?php $date ?>">
+                    <input type="date" name='date' class="form-control" id="form_date" >
                     <br>
                     <label class="control-label">사용 시간:</label><br>
                     <select class="form-control" name="date_time" multiple>
