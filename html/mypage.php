@@ -45,7 +45,7 @@
                     <?php
                     if($_SESSION["status"] == "log_in") {
                         $user_id = $_SESSION["id"];
-                        $query = "SELECT * FROM reservation WHERE id='$user_id'";
+                        $query = "SELECT user_id, student_id, department FROM user_info WHERE user_id='$user_id'";
                         $db = new PDO("mysql:dbname=smash", "root", "root");
                         $rows = $db->query($query);
                     ?>
@@ -54,15 +54,34 @@
                         <ul id="Grid">
                             <li>학생정보
                                 <div class = "infor">    
-                                    <p>이름써주시고</p> <p>학번써주시구</p> <p>학과써주세요</p>
-                                </div>           
+                                    <?php foreach($rows as $row) { ?>
+                                        <p>이름: <?= $row["user_id"] ?></p>
+                                        <?php if($row["student_id"] == null) {?> <p>등록된 학번이 없습니다.</p>
+                                        <?php } else {?> <p>학번: <?= $row["student_id"] ?></p> <?php } ?>
+                                        <?php if($row["student_id"] == null) {?> <p>등록된 학과가 없습니다.</p>
+                                        <?php } else {?> <p>학과: <?= $row["department"] ?></p> <?php } ?>
+                                    <?php } ?>
+                                </div>
                                 <div class="bt">
                                     <a href=""><button>회원정보수정</button></a>
                                 <div>
                             </li>
                             <li>예약확인
                                 <div class = "infor">
-                                    <p>방번호써주시고</p> <p>예약날짜써주시고</p> <p>시간써주세요</p>
+                                    <?php $query = "SELECT * FROM reservation WHERE id='$user_id'";
+                                        $rows = $db->query($query);
+                                        if($rows->rowCount() == 0) {
+                                    ?>
+                                        <p>예약이 없습니다.</p>
+                                    <?php
+                                        } else {
+                                            foreach($rows as $row) {
+                                    ?>
+                                        <p>방번호: <?= $row["reserve_room_no"] ?></p>
+                                        <p>예약날짜: <?= $row["reserve_date"] ?></p>
+                                        <p>예약시간: <?= $row["reserve_time"] ?></p>
+                                    <?php   } ?>
+                                    <?php } ?>
                                 </div>
                                 <div class="bt">
                                     <a href=""><button>예약변경</button></a>

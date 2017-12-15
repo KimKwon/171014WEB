@@ -147,7 +147,7 @@
                         <div id="afterlogin">
                             <ul>
                                 <li><a href="mypage.php">My Page</a></li>
-                                <li><a href="reserve.html">Reservation</a></li>
+                                <li><a href="reserve.php">Reservation</a></li>
                                 <li><a href="logout.php">Log out</a></li>
                             </ul>
                         </div>

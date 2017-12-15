@@ -5,7 +5,9 @@ use SMASH;
 create table user_info(
 	user_id varchar(30) primary key not null,
 	user_pw varchar(20) not null,
-	user_email varchar(300) not null
+	user_email varchar(300) not null,
+	student_id numeric(10),
+	department varchar(10)
 );
 
 create table reservation(
