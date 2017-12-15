@@ -48,7 +48,12 @@ nav{
 
 .room_time td:not(:first-child){
     background-color: yellowgreen;
+
 }
+.room_time td:not(.reserve):not(:first-child){
+    cursor: pointer;
+}
+
 
 .room_time td:first-child){
     width: 3em;
