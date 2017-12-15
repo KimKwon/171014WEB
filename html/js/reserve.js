@@ -58,9 +58,9 @@ window.onload = function() {
     $("reser").observe('click',function(){
         var date = $("datepicker").value;
         $("form_date").value = date ;
-        $("reserve_room_no").value = parseInt(want_time[0]/12);
-        $("reserve_time").value = (want_time[0]%12)+8 +" : 00";
-        $("reserve_end").value = (want_time[want_time.length-1]%12)+8 +" : 00";
+        $("reserve_room_no").innerHTML = parseInt(want_time[0]/12).toString();
+        $("reserve_time").innerHTML = (want_time[0]%12)+8 +" : 00";
+        $("reserve_end").innerHTML = (want_time[want_time.length-1]%12)+9 +" : 00";
         $("reserve_period").value = want_time.length;
     });
 

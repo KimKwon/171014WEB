@@ -27,7 +27,7 @@ try {
 
     $xmldoc = new DOMDocument();
     $Smash_tag = $xmldoc->createElement("Smash"); //<times>
-    for($j=1;$j<=9;$j++){
+    for($j=0;$j<=8;$j++){
         // $j=1;
         $room_tag = $xmldoc->createElement("room");
         $room_tag -> setAttribute("room", "room$j");
