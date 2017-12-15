@@ -110,9 +110,10 @@
                     <input type="date" name='date' class="form-control" id="form_date" >
                     <br>
                     <label class="control-label">방 번호:</label>
-                    <input type="text" name='reserve_room_no' class="form-control" id="reserve_room_no">
+                    <p class="form-control-static" id='reserve_room_no'></p>
+                    <!-- <input type="text" name='reserve_room_no' class="form-control" id="reserve_room_no"> -->
                     <br>
-                    <label class="control-label">사용 시간:     </label>
+                    <label class="control-label">사용 시간:</label>
                     <!-- <select class="form-control" name="date_time" multiple> -->
                       <!-- <optgroup label="사용 시간 선택">
                         <option value="9">AM 09:00</option>
@@ -127,15 +128,11 @@
                         <option value="18">AM 18:00</option>
                         <option value="19">AM 19:00</option>
                       </optgroup> -->
-                      <div class="using_time">
-                          <input type="text" name="reserve_time" class="form-control" id="reserve_time" >
-                      </div>
-                      <div class="using_time">
-                          <h2>~</h2>
-                      </div>
-                      <div class="using_time">
-                          <input type="text" name="reserve_end" class="form-control" id="reserve_end" >
-                      </div>
+
+                    <p><span class='form-control-static' id='reserve_time'></span>~<span class='form-control-static' id='reserve_end'></span></p>
+                          <!-- <input type="text" name="reserve_time" class="form-control" id="reserve_time" > -->
+
+
 
                     <!-- </select> -->
                     <br>
@@ -143,7 +140,17 @@
                     <input type="text" name='purpose' class="form-control" id="form_purpose">
                     <br>
                     <label class="control-label">사용 인원:</label><br>
-                    <textarea name='population' class="form-control" id="form_population"></textarea>
+                    <select class="form-control" name="" id='form_population' multiple>
+                      <optgroup label="사용 인원 선택">
+                        <option value="1">1명</option>
+                        <option value="2">2명</option>
+                        <option value="3">3명</option>
+                        <option value="4">4명</option>
+                        <option value="5">5명</option>
+                        <option value="6">6명 이상</option>
+                      </optgroup>
+                    </select>
+                    <!-- <textarea name='population' class="form-control" id="form_population"></textarea> -->
                     <input type="hidden" name="reserve_period" id="reserve_period">
                   </div>
 
