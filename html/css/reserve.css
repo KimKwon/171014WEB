@@ -1,5 +1,4 @@
 body{
-
 }
 nav{
     height: 65em;
@@ -9,7 +8,7 @@ nav{
 }
 .nav-content-inner{
     padding-right: 2.5%;
-    padding-left: 2.5%
+    padding-left: 2.5%;
 }
 .ulmargin{
     margin-top: 10em;
