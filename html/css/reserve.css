@@ -51,25 +51,29 @@ a:hover{
 	border-radius: 5px;
 }
 
-#table .room_time .reserve{
+#table .room_time .reserve,#brown{
     background-color: #996633;
 }
 
-.room_time td:not(:first-child){
+.room_time td:not(:first-child),#ygreen{
     background-color: yellowgreen;
 
 }
+
+.room_time td:not(:first-child):hover{
+    background-color: #CCFF99;
+}
+
 .room_time td:not(.reserve):not(:first-child){
     cursor: pointer;
 }
-
 
 .room_time td:first-child){
     width: 3em;
 }
 
-#table .room_time .choose{
-    background-color: black;
+#table .room_time .choose,#green{
+    background-color: #336633;
 }
 
 #table tr:first-child{
@@ -87,6 +91,13 @@ a:hover{
     width: 10em;
     display: inline-block;
 }
+
+.example_box{
+    width: 40px;
+    padding-top: 40px;
+    border: solid 2px white;
+}
+
 input{
     text-align: center;
 }

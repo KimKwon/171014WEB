@@ -114,7 +114,7 @@
           예약하기
         </button>
         <div class="example">
-            <p>Reserved =  </p><div class="example_box" class="brown"></div> <p>Chosen = </p><div class="example_box" class="black"></div> <p>You Can Choose = </p><div class="example_box" class="green"></div>
+            <p>Reserved =  </p><div class="example_box" id="brown"></div> <p>Chosen = </p><div class="example_box" id="green"></div> <p>You Can Choose = </p><div class="example_box" id="ygreen"></div>
         </div>
 
         <!-- Modal -->
