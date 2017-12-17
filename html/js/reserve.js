@@ -70,13 +70,25 @@ window.onload = function() {
         // $("reserve_time").innerHTML = (want_time[0]%12)+8 +" : 00";
         // $("reserve_end").innerHTML = (want_time[want_time.length-1]%12)+9 +" : 00";
         $("reserve_period").value = want_time.length;
+
     });
 
+    j$('#reser').on("click",function(){
+      if($$(".choose").length<=0){
+        alert("방을 선택해주세요.");
+      }
+      else{
+        j$('#myModal').modal();
+      }
 
-    j$('#myModalLabel').css("color","black");
-    j$('.modal-body').css("color","black");
+    })
+
 };
 
+// j$("td.reserve").on("click",function(){
+//
+//
+// })
 
 $(document).on("click","td",function(){
       var index = j$("td").index(this)
@@ -129,6 +141,7 @@ $(document).on("click","td",function(){
  });
 
 
+
 function show_time(ajax) {
     // alert(ajax.responseText);
     var Smash = ajax.responseXML.getElementsByTagName("Smash");
@@ -148,10 +161,11 @@ function show_time(ajax) {
             for(var k=0;k<time.length;k++){
                 if( time[k].firstChild.nodeValue == j){
                     td.addClassName("reserve");
+
                 }
             }
             $(room_num).appendChild(td);
         }
     }
-    // alert("이러고 바로 돌아감;");
+
 }

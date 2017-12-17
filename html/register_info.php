@@ -18,7 +18,7 @@
             $query = "INSERT INTO reservation(id, reserve_date, reserve_time, reserve_room_no,reserve_period , purpose, population) VALUES ('$id', '$reserve_date', '$reserve_time' ,$iroom_no, $period ,'$purpose', $ipopulation);";
             $db->query($query);
 
-            // header("Location: reserve.php");
+            header("Location: reserve.php");
         } catch(PDOException $e) {
             echo $e->getMessage();
         }
