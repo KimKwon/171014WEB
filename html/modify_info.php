@@ -34,7 +34,7 @@
         <nav>
             <?php
             session_start();
-            $db = new PDO("mysql:dbname=SMASH", "root", "root");
+            $db = new PDO("mysql:host=gs-db-instance1.cgkevqnkktap.ap-northeast-2.rds.amazonaws.com;port=3306;dbname=smash","smash","smash1219");		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
             if($_SESSION["status"]=="log_in"){
                 $user_id = $_SESSION["id"];
                 if(isset($user_id)){

@@ -4,10 +4,9 @@
 	$us_email = $_POST['u_email'];
 
 	try{
-		$db = new PDO("mysql:dbname=smash;host:localhost","root","root");
-		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+		$db = new PDO("mysql:host=gs-db-instance1.cgkevqnkktap.ap-northeast-2.rds.amazonaws.com;port=3306;dbname=smash","smash","smash1219");		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$db->exec("INSERT INTO user_info(user_id,user_pw,user_email) values ('$us_id','$us_pw','$us_email', null, null);");
+		$db->exec("INSERT INTO user_info(user_id,user_pw,user_email, student_id, department) values ('$us_id','$us_pw','$us_email', null, null);");
 ?>
 		<script type="text/javascript">
 			alert("가입이 완료되었습니다 <?=$us_id?> 님!");
