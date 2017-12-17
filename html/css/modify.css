@@ -3,10 +3,10 @@
     font-weight: 2;
     text-align: center;
     margin-top: 2em;
-    color: black;
+    color: rgb(77, 53, 39);
 }
 .userinfo{
-    color: black;
+    color: rgb(77, 53, 39);
 }
 .userinfo li{
     font-size: 30px;
@@ -14,7 +14,7 @@
 }
 .modifier{
     margin-top: 1em;
-    color: black;
+    color: rgb(77, 53, 39);
 }
 a li{
     margin-top: 3em;
@@ -30,7 +30,7 @@ li{
     line-height: 1em;
 }
 p{
-    color: black;
+    color: rgb(77, 53, 39);
     font-size: 30px;
 }
 nav{
@@ -38,7 +38,7 @@ nav{
     text-align: center;
     margin: auto;
     height: 40em;
-    background-color: gray;
+    background-color: rgba(77, 53, 39, 0.4);
 }
 modifyalien{
     text-align: left;
