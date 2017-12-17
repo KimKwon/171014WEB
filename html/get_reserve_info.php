@@ -18,6 +18,6 @@ foreach ($rows as $row ) {
 }
 
 
-$info = array('us_em' => $us_em,'purpose'=> $purpose,'population'=>$population,'num'=>$num,'time'=>$time,'date'=>$date);
+$info = array('us_em' => $us_em,'purpose'=> $purpose,'population'=>$population);
 echo json_encode($info);
  ?>
