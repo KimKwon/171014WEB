@@ -9,7 +9,7 @@
             $period = $_POST['reserve_period'];
             $population = $_POST["form_population"];
             $purpose = $_POST["form_purpose"];
-            $db = new PDO("mysql:dbname=smash", "root", "root");
+            $db = new PDO("mysql:host=gs-db-instance1.cgkevqnkktap.ap-northeast-2.rds.amazonaws.com;port=3306;dbname=smash","smash","smash1219");		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $iroom_no = intval($room_no);
             $_reserve_time = intval($reserve_time);
