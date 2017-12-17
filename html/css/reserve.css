@@ -11,8 +11,15 @@ nav{
     padding-right: 2.5%;
     padding-left: 2.5%
 }
-
-
+.ulmargin{
+    margin-top: 10em;
+}
+li{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
 #table{
     /* border: 10px solid rgb(77, 53, 39); */
     border-radius: 20px;
@@ -23,7 +30,9 @@ nav{
     float: left;
     margin-bottom: 5em;
 }
-
+/* .timetable{
+    margin-top: 1em;
+} */
 #datepicker{
     color: black;
 }

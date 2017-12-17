@@ -1,0 +1,45 @@
+#heading{
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-weight: 2;
+    text-align: center;
+    margin-top: 2em;
+    color: black;
+}
+.userinfo{
+    color: black;
+}
+.userinfo li{
+    font-size: 30px;
+    text-align: center;
+}
+.modifier{
+    margin-top: 1em;
+    color: black;
+}
+a li{
+    margin-top: 3em;
+    font-size: 20px;
+}
+a{
+    margin-top: 3em;
+}
+li{
+    margin-bottom: 1em;
+    display: inline;
+    margin-right: 3em;
+    line-height: 1em;
+}
+p{
+    color: black;
+    font-size: 30px;
+}
+nav{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    height: 40em;
+    background-color: gray;
+}
+modifyalien{
+    text-align: left;
+}
