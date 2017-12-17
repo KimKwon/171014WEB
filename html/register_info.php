@@ -14,11 +14,22 @@
             $iroom_no = intval($room_no);
             $_reserve_time = intval($reserve_time);
             $ipopulation = intval($population);
-
+            //$id = db->quote($id);
+            $rows = $db->query("SELECT reserve_date FROM reservation WHERE id = '$id'");
+            foreach($rows as $row){
+                if($row["reserve_date"] == $reserve_date){
+                    echo "<script>window.alert('이미 오늘 예약하신 방이 존재합니다.');</script>"; 
+                    //header("Location: reserve.php");
+                    echo("<script>location.replace('reserve.php');</script>"); 
+                    exit;
+                }
+            }
             $query = "INSERT INTO reservation(id, reserve_date, reserve_time, reserve_room_no,reserve_period , purpose, population) VALUES ('$id', '$reserve_date', '$reserve_time' ,$iroom_no, $period ,'$purpose', $ipopulation);";
             $db->query($query);
 
-            // header("Location: reserve.php");
+            //header("Location: reserve.php");
+            //header를 사용하면 캐쉬가 꼬인다고 해서 자바로 바꿨습니다.
+            echo("<script>location.replace('reserve.php');</script>"); 
         } catch(PDOException $e) {
             echo $e->getMessage();
         }
