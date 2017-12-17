@@ -46,7 +46,7 @@
                     if($_SESSION["status"] == "log_in") {
                         $user_id = $_SESSION["id"];
                         $query = "SELECT user_id, student_id, department FROM user_info WHERE user_id='$user_id'";
-                        $db = new PDO("mysql:dbname=smash", "root", "root");
+                        $db = new PDO("mysql:host=gs-db-instance1.cgkevqnkktap.ap-northeast-2.rds.amazonaws.com;port=3306;dbname=smash","smash","smash1219");		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
                         $rows = $db->query($query);
                     ?>
                         <h2>#<?= $user_id ?>님의 My Page</h2>
@@ -97,6 +97,7 @@
                 </div>
             </div>
         </div>
+
 
     </nav>
     <section class="intro">

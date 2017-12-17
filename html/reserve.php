@@ -17,13 +17,15 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
 
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.css">
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.js"></script>
 
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 
     <script src="js/reserve.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -78,6 +80,23 @@
                         <tr class="room_time" id="room8">
                         </tr>
                     </table>
+                    <div class="modal fade" id='myModal2' tabindex="-1" role="dialog" aria-labelledby='myModalLabel' aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Modal title</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>One fine body&hellip;</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div><!-- /.modal-content -->
+                      </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
                 </div>
 
                 <div>
@@ -87,7 +106,7 @@
             </div>
         <br>
             <!-- Button trigger modal -->
-        <button type="button" id="reser"class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        <button type="button" id="reser"class="btn btn-primary btn-lg" data-toggle="modal">
           예약하기
         </button>
         <div class="example">
@@ -171,6 +190,7 @@
         </div>
 
             <!-- <button id="submit">제출하기</button> -->
+
         </div>
 
 
