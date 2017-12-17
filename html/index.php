@@ -36,7 +36,7 @@
 </head>
 
 <body>
-    <!-- <button type="button" id="fold" name="button">접기</button> -->
+    <!-- check log_in status -->
     <?php
         if(!isset($_SESSION["status"])) { $_SESSION["status"] = "log_out"; }
     ?>
