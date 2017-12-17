@@ -80,24 +80,7 @@
                         <tr class="room_time" id="room8">
                         </tr>
                     </table>
-                    <div class="modal fade" id='myModal2' tabindex="-1" role="dialog" aria-labelledby='myModalLabel' aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title">Modal title</h4>
-                          </div>
-                          <div class="modal-body">
-                            <p>One fine body&hellip;</p>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                        </div><!-- /.modal-content -->
-                      </div><!-- /.modal-dialog -->
-                    </div><!-- /.modal -->
-                </div>
+
 
                 <div>
                     <input type="text" id="datepicker">
@@ -105,6 +88,28 @@
                 </div>
             </div>
         <br>
+        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModal2Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModal3Label">예약 정보 출력</h4>
+              </div>
+              <div class="modal-body">
+                <label class="form-control-static">대표자 이메일: </label><input class="form-control" id="disabledInput" name='1' type="text" placeholder=""  readonly>
+                <br>
+                <label class="form-control-static">예약 목적: </label><input class="form-control" id="disabledInput" name='2' type="text" placeholder=""  readonly>
+                <br>
+                <label class="form-control-static">예약 인원: </label><input class="form-control" id="disabledInput" name='3' type="text" placeholder=""  readonly>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
             <!-- Button trigger modal -->
         <button type="button" id="reser"class="btn btn-primary btn-lg" data-toggle="modal">
           예약하기
@@ -131,25 +136,9 @@
                     <label class="control-label">방 번호:</label>
                     <br>
                     <input class="form-control" id="disabledInput" name='reserve_room_no' type="text" placeholder=""  readonly>
-                    <!-- <p class="form-control-static" name='reserve_room_no' id='reserve_room_no'></p> -->
-                    <!-- <input type="text" name='reserve_room_no' class="form-control" id="reserve_room_no"> -->
                     <br>
                     <label class="control-label">사용 시간:</label>
                     <br>
-                    <!-- <select class="form-control" name="date_time" multiple> -->
-                      <!-- <optgroup label="사용 시간 선택">
-                        <option value="9">AM 09:00</option>
-                        <option value="10">AM 10:00</option>
-                        <option value="11">AM 11:00</option>
-                        <option value="12">AM 12:00</option>
-                        <option value="13">AM 13:00</option>
-                        <option value="14">AM 14:00</option>
-                        <option value="15">AM 15:00</option>
-                        <option value="16">AM 16:00</option>
-                        <option value="17">AM 17:00</option>
-                        <option value="18">AM 18:00</option>
-                        <option value="19">AM 19:00</option>
-                      </optgroup> -->
                     <span><input class="form-control" id="disabledInput" name='reserve_time' type="text" placeholder="" value='' readonly></span>
                     <h4>~</h4>
                     <span><input class="form-control" id="disabledInput" name='reserve_end' type="text" placeholder="" value='' readonly></span>

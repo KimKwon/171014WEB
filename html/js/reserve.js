@@ -21,7 +21,7 @@ $( function() {
   j$( "#datepicker" ).datepicker({
       changeMonth: false,
       changeYear: false,
-      dateFormat: 'yy-mm-dd',
+      dateFormat: 'yyyy-mm-dd',
       minDate: 'today',
       maxDate: 'today'+7,
   });
@@ -58,17 +58,15 @@ window.onload = function() {
     $("reser").observe('click',function(){
         var date = $("datepicker").value;
         $("form_date").value = date ;
-        // $("reserve_room_no").placeholder = parseInt(want_time[0]/12).toString();
-        j$('#disabledInput').attr('placeholder',parseInt(want_time[0]/12).toString());
-        $$('#disabledInput')[0].value = parseInt(want_time[0]/12).toString();
+        // $('#disabledInput').attr('placeholder',parseInt(want_time[0]/12).toString());
+        $$('#disabledInput[name=\'reserve_room_no\']')[0].value = parseInt(want_time[0]/12).toString();
 
 
-        j$('span input#disabledInput').attr('placeholder',(want_time[0]%12)+8 +" : 00");
+        // j$('span input#disabledInput').attr('placeholder',(want_time[0]%12)+8 +" : 00");
         $$('span input#disabledInput')[0].value = (want_time[0]%12)+8 +" : 00";
-        j$('span input#disabledInput[name=\'reserve_end\']').attr('placeholder',(want_time[want_time.length-1]%12)+9 +" : 00");
+        // j$('span input#disabledInput[name=\'reserve_end\']').attr('placeholder',(want_time[want_time.length-1]%12)+9 +" : 00");
         $$('span input#disabledInput[name=\'reserve_end\']')[0].value = (want_time[want_time.length-1]%12)+9 +" : 00";
-        // $("reserve_time").innerHTML = (want_time[0]%12)+8 +" : 00";
-        // $("reserve_end").innerHTML = (want_time[want_time.length-1]%12)+9 +" : 00";
+
         $("reserve_period").value = want_time.length;
 
     });
@@ -82,13 +80,12 @@ window.onload = function() {
       }
 
     })
+    j$('#myModalLabel').css("color","black");
+    j$('.modal-body').css("color","black");
 
 };
 
-// j$("td.reserve").on("click",function(){
-//
-//
-// })
+
 
 $(document).on("click","td",function(){
       var index = j$("td").index(this)
@@ -167,5 +164,41 @@ function show_time(ajax) {
             $(room_num).appendChild(td);
         }
     }
+    j$('.reserve').on("click",function(events){
+      var a = event.target;
+      infoLoader(a);
+      // j$('#myModal2').modal();
+    })
+    // alert("이러고 바로 돌아감;");
+}
 
+function infoLoader(elem){
+  var arr = [];
+  var count=0;
+  var tmp = elem.previousSibling;
+  while(tmp = tmp.previousSibling){
+    arr.push(tmp);
+    count++;
+  }
+  var date = $("datepicker").value;
+
+  var room = arr[arr.length-1].innerHTML;
+  new Ajax.Request("get_reserve_info.php",{
+    method: "post",
+    parameters: {room_no:room, room_time:(9+count), date:date},
+    onSuccess: showInfo,
+  })
+}
+
+function showInfo(ajax){
+  var a = ajax.responseText;
+  var a = JSON.parse(a);
+  var us_em = a.us_em;
+  var purpose = a.purpose;
+  var population = a.population;
+  $$('#disabledInput[name=\'1\']')[0].value = us_em;
+  $$('#disabledInput[name=\'2\']')[0].value = purpose;
+  $$('#disabledInput[name=\'3\']')[0].value = population;
+  j$('#myModal3Label').css("color","black");
+  j$('#myModal3').modal();
 }

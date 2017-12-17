@@ -7,6 +7,7 @@ try {
 
     for($h=1;$h<=9;$h++){
         $query = "SELECT reserve_time , reserve_period FROM reservation WHERE reserve_room_no = $h AND reserve_date = '$date' ";
+        // $db = new PDO("mysql:dbname=smash;host:localhost","root","root");		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 		$db = new PDO("mysql:host=gs-db-instance1.cgkevqnkktap.ap-northeast-2.rds.amazonaws.com;port=3306;dbname=smash","smash","smash1219");		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
         $rows = $db->query($query);
         $time= array();

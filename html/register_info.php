@@ -10,6 +10,7 @@
             $population = $_POST["form_population"];
             $purpose = $_POST["form_purpose"];
             $db = new PDO("mysql:host=gs-db-instance1.cgkevqnkktap.ap-northeast-2.rds.amazonaws.com;port=3306;dbname=smash","smash","smash1219");		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+            // $db = new PDO("mysql:dbname=smash;host:localhost","root","root");		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $iroom_no = intval($room_no);
             $_reserve_time = intval($reserve_time);
@@ -18,9 +19,9 @@
             $rows = $db->query("SELECT reserve_date FROM reservation WHERE id = '$id'");
             foreach($rows as $row){
                 if($row["reserve_date"] == $reserve_date){
-                    echo "<script>window.alert('이미 오늘 예약하신 방이 존재합니다.');</script>"; 
+                    echo "<script>window.alert('이미 오늘 예약하신 방이 존재합니다.');</script>";
                     //header("Location: reserve.php");
-                    echo("<script>location.replace('reserve.php');</script>"); 
+                    echo("<script>location.replace('reserve.php');</script>");
                     exit;
                 }
             }
@@ -33,7 +34,7 @@
 <<<<<<< HEAD
             //header("Location: reserve.php");
             //header를 사용하면 캐쉬가 꼬인다고 해서 자바로 바꿨습니다.
-            echo("<script>location.replace('reserve.php');</script>"); 
+            echo("<script>location.replace('reserve.php');</script>");
 =======
             header("Location: reserve.php");
 >>>>>>> origin/master
