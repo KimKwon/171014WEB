@@ -12,13 +12,20 @@ nav{
     padding-left: 2.5%
 }
 .ulmargin{
-    margin-top: 10em;
+    margin-top: 1em;
 }
 li{
     text-decoration: none;
 }
+a{
+    color:rgb(77, 53, 39);
+}
 a:hover{
-    text-decoration: none;
+    text-decoration-line: none;
+    color: rgb(77, 53, 39);
+}
+a:visited{
+    color: rgb(77, 53, 39);
 }
 #table{
     /* border: 10px solid rgb(77, 53, 39); */
@@ -30,20 +37,22 @@ a:hover{
     float: left;
     margin-bottom: 5em;
 }
-/* .timetable{
-    margin-top: 1em;
-} */
+.timetable{
+    margin-top: 5em;
+    margin-left: 5em;
+    margin-right: 0;
+}
 #datepicker{
     color: black;
 }
 #reser{
-    margin-top: 15em;
+    margin-top: 14em;
 }
 
 #search{
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
   	outline: 0;
-  	background: brown;
+  	background: rgb(134, 103, 103);
 	opacity: 0.75;
   	padding: 8px;
   	box-sizing: border-box;
@@ -52,7 +61,8 @@ a:hover{
 }
 
 #table .room_time .reserve{
-    background-color: #996633;
+    background-image: url('images/x.png');
+    background-color: rgb(100, 100, 100);
 }
 
 .room_time td:not(:first-child){
@@ -64,7 +74,7 @@ a:hover{
 }
 
 
-.room_time td:first-child){
+.room_time td:not(first-child){
     width: 3em;
 }
 
@@ -77,7 +87,7 @@ a:hover{
 }
 
 .example{
-    margin-top: 5em;
+    margin-top: 10em;
 }
 .example p{
     font-size: 20pt;
