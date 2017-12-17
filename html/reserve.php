@@ -131,7 +131,7 @@
                 <!-- <?php $date = $_GET["date"]?> -->
                 <div class="form-group">
                     <label class="control-label">사용 날짜:</label>
-                    <input type="date" name='date' class="form-control" id="form_date" >
+                    <input type="date" name='date' class="form-control" id="form_date" placeholder=""  readonly >
                     <br>
                     <label class="control-label">방 번호:</label>
                     <br>
