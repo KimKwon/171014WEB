@@ -21,7 +21,7 @@ $( function() {
   j$( "#datepicker" ).datepicker({
       changeMonth: false,
       changeYear: false,
-      dateFormat: 'yyyy-mm-dd',
+      dateFormat: 'yy-mm-dd',
       minDate: 'today',
       maxDate: 'today'+7,
   });
@@ -158,21 +158,15 @@ function show_time(ajax) {
             for(var k=0;k<time.length;k++){
                 if( time[k].firstChild.nodeValue == j){
                     td.addClassName("reserve");
-
                 }
             }
             $(room_num).appendChild(td);
         }
     }
-    j$('.reserve').on("click",function(events){
+    j$('.reserve')[0].on("click",function(events){
       var a = event.target;
       infoLoader(a);
-      console.log(g_count);
-      var temp = g_count;
-      while(temp--){
-        infoLoader(a.nextSibling);
-        console.log("dddd");
-      }
+      flag=true;
     })
     // alert("이러고 바로 돌아감;");
 }
@@ -190,7 +184,13 @@ function infoLoader(elem){
       arr.push(tmp);
       count++;
     }
-    var room = arr[arr.length-1].innerHTML;
+    if(arr.length<=0){
+      var room = elem.previousSibling.innerHTML;
+    }
+    else{
+        var room = arr[arr.length-1].innerHTML;
+    }
+
     g_count = count;
     g_room = room;
     flag=false;
