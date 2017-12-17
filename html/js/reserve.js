@@ -167,38 +167,50 @@ function show_time(ajax) {
     j$('.reserve').on("click",function(events){
       var a = event.target;
       infoLoader(a);
-      // j$('#myModal2').modal();
+      console.log(g_count);
+      var temp = g_count;
+      while(temp--){
+        infoLoader(a.nextSibling);
+        console.log("dddd");
+      }
     })
     // alert("이러고 바로 돌아감;");
 }
 
+var g_count;
+var g_room;
+var flag = true;
+
 function infoLoader(elem){
-  var arr = [];
   var count=0;
-  var tmp = elem.previousSibling;
-  while(tmp = tmp.previousSibling){
-    arr.push(tmp);
-    count++;
+  var arr = [];
+  if(flag){
+    var tmp = elem.previousSibling;
+    while(tmp = tmp.previousSibling){
+      arr.push(tmp);
+      count++;
+    }
+    var room = arr[arr.length-1].innerHTML;
+    g_count = count;
+    g_room = room;
+    flag=false;
   }
   var date = $("datepicker").value;
-
-  var room = arr[arr.length-1].innerHTML;
   new Ajax.Request("get_reserve_info.php",{
     method: "post",
-    parameters: {room_no:room, room_time:(9+count), date:date},
-    onSuccess: showInfo,
+    parameters: {room_no:g_room, room_time:(9+g_count), date:date},
+    onSuccess: (ajax) => {
+      showInfo(ajax, g_count);
+    }
   })
 }
 
-function showInfo(ajax){
+function showInfo(ajax,count){
   var a = ajax.responseText;
-  var a = JSON.parse(a);
-  var us_em = a.us_em;
-  var purpose = a.purpose;
-  var population = a.population;
-  $$('#disabledInput[name=\'1\']')[0].value = us_em;
-  $$('#disabledInput[name=\'2\']')[0].value = purpose;
-  $$('#disabledInput[name=\'3\']')[0].value = population;
+  a = JSON.parse(a);
+  $$('#disabledInput[name=\'1\']')[0].value = a.us_em;
+  $$('#disabledInput[name=\'2\']')[0].value = a.purpose;
+  $$('#disabledInput[name=\'3\']')[0].value = a.population;
   j$('#myModal3Label').css("color","black");
   j$('#myModal3').modal();
 }
