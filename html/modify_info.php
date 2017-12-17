@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <link href="css/style.css" rel="stylesheet">
+        <link href="css/modify.css" rel="stylesheet">
     </head>
 
     <body>
@@ -18,13 +19,17 @@
         <header>
             <ul>
                 <a href="index.php">Ordinary Colleage Students</a>
+<<<<<<< HEAD
                 <li><a href="reserve.php">Reservation</a></li>
                 <li><a href="contactus.html">Contact us</a></li>
+=======
+                <li><a href="reserve.html">Reservation</a></li>
+>>>>>>> e6c9285c437879bb2a566ab880fa72589803b4f2
                 <!-- <li><a href="aboutus.html">About us</a></li> -->
                 <li class="dropdown">
                     Log out
                     <div class="dropdown-content">
-                        <a href="logout.php">Log Out</a>
+                        <a href="logout.php">Log out</a>
                     </div>
 
                 </li>
@@ -51,11 +56,13 @@
                    else{
                      $email = $row['user_email'];
                      ?>
-                     <h1 id='heading'>내 정보 변경하기</h1>
+                     <h1 id="heading">내 정보 변경하기</h1>
                      <div class="userinfo">
-                       <p>아이디 <?=$row["user_id"]?></p>
-                       <p>이메일 <?=$row['user_email']?></p>
-                     </div>
+                       <ul>
+                        <li>아이디 : <?=$row["user_id"]?></li>
+                        <li>이메일 : <?=$row['user_email']?></li>
+                       </ul>
+                      </div>
 
                       <div class="modifier">
                         <ul>
@@ -67,8 +74,9 @@
                               list-style-type:none;
                             }
                             .modifier li a:visited, .modifier li a:link{
-                              color: pink;
+                              color: black;
                               text-decoration: none;
+                              margin-top: 3em;
                             }
                             .modifier li a:hover{
                               color:white;
@@ -97,9 +105,12 @@
 
 
               <form class="pw_modify" action="modify_info.php?modify=pw&put=true" method="post">
-                <p>이전 비밀번호:<input type="password" name="pre_pw" value=""></p>
-                <p>새로운 비밀번호:<input type="password" name="new_pw" value=""></p>
-                <input type="submit" name="" value="변경하기">
+              <div class = "modifyalien">  
+                <p>이전 비밀번호 : <input type="password" name="pre_pw" value=""></p>
+                <p>새로운 비밀번호 : <input type="password" name="new_pw" value=""></p>
+               
+              <input type="submit" name="" value="변경하기">
+              </div>
               </form>
 
 
@@ -134,6 +145,7 @@
             else if($_GET['modify']==='em'){
               ?>
               <form class="em_modify" action="modify_info.php?modify=em&put=true" method="post">
+                
                 <p>이전 이메일:<?=$email?></p>
                 <p>새로운 이메일:<input type="text" name="new_em" value=""></p>
                 <input type="submit" name="" value="변경하기">

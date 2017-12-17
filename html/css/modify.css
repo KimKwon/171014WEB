@@ -1,0 +1,45 @@
+#heading{
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-weight: 2;
+    text-align: center;
+    margin-top: 2em;
+    color: rgb(77, 53, 39);
+}
+.userinfo{
+    color: rgb(77, 53, 39);
+}
+.userinfo li{
+    font-size: 30px;
+    text-align: center;
+}
+.modifier{
+    margin-top: 1em;
+    color: rgb(77, 53, 39);
+}
+a li{
+    margin-top: 3em;
+    font-size: 20px;
+}
+a{
+    margin-top: 3em;
+}
+li{
+    /* margin-bottom: 2em; */
+    display: inline;
+    margin-right: 3em;
+    line-height: 1em;
+}
+p{
+    color: rgb(77, 53, 39);
+    font-size: 30px;
+}
+nav{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    height: 40em;
+    background-color: rgba(77, 53, 39, 0.4);
+}
+modifyalien{
+    text-align: left;
+}

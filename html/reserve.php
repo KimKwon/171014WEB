@@ -45,11 +45,10 @@
 
 
     <header>
-        <ul>
+        <ul class="ulmargin">
             <a href="index.php">Ordinary Colleage Students</a>
-            <li><a href="contactus.html">Contact us</a></li>
-            <li><a href="aboutus.html">About us</a></li>
-            <li>Booking</li>
+            <li><a href="mypage.php">My Page</a></li>
+            <li><a href="logout.php">Log out</a></li>
         </ul>
 
     </header>
