@@ -199,13 +199,11 @@ function infoLoader(elem){
   new Ajax.Request("get_reserve_info.php",{
     method: "post",
     parameters: {room_no:g_room, room_time:(9+g_count), date:date},
-    onSuccess: (ajax) => {
-      showInfo(ajax, g_count);
-    }
+    onSuccess: showInfo
   })
 }
 
-function showInfo(ajax,count){
+function showInfo(ajax){
   var a = ajax.responseText;
   a = JSON.parse(a);
   $$('#disabledInput[name=\'1\']')[0].value = a.us_em;

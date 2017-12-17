@@ -19,12 +19,12 @@
         <header>
             <ul>
                 <a href="index.php">Ordinary Colleage Students</a>
-<<<<<<< HEAD
+
                 <li><a href="reserve.php">Reservation</a></li>
                 <li><a href="contactus.html">Contact us</a></li>
-=======
+
                 <li><a href="reserve.html">Reservation</a></li>
->>>>>>> e6c9285c437879bb2a566ab880fa72589803b4f2
+
                 <!-- <li><a href="aboutus.html">About us</a></li> -->
                 <li class="dropdown">
                     Log out
@@ -68,6 +68,7 @@
                         <ul>
                           <li><a href="modify_info.php?modify=pw"> 비밀번호 변경하기 </a></li>
                           <li><a href="modify_info.php?modify=em"> 이메일 변경하기</a></li>
+                          <li><a href="modify_info.php?modify=up">학번/학과 등록하기</a></li>
                           <li><a href="mypage.php">돌아가기</a></li>
                           <style media="screen">
                             .modifier li{
@@ -105,10 +106,10 @@
 
 
               <form class="pw_modify" action="modify_info.php?modify=pw&put=true" method="post">
-              <div class = "modifyalien">  
+              <div class = "modifyalien">
                 <p>이전 비밀번호 : <input type="password" name="pre_pw" value=""></p>
                 <p>새로운 비밀번호 : <input type="password" name="new_pw" value=""></p>
-               
+
               <input type="submit" name="" value="변경하기">
               </div>
               </form>
@@ -145,7 +146,7 @@
             else if($_GET['modify']==='em'){
               ?>
               <form class="em_modify" action="modify_info.php?modify=em&put=true" method="post">
-                
+
                 <p>이전 이메일:<?=$email?></p>
                 <p>새로운 이메일:<input type="text" name="new_em" value=""></p>
                 <input type="submit" name="" value="변경하기">
@@ -157,6 +158,27 @@
                 $db->query($query3);
                 echo "<script>alert('이메일이 변경되었습니다.');</script>";
               }
+            }
+            elseif ($_GET['modify']=='up') {
+              ?>
+              <form class="em_modify" action="modify_info.php?modify=up&put=true" method="post">
+
+                <p>나의 학번:<input type="text" name="up_sid" value=""></p>
+                <p>나의 학과:<input type="text" name="up_dep" value=""></p>
+                <input type="submit" name="" value="업로드하기">
+              </form>
+              <?php
+              if($_GET['put']=='true'){
+                $sid = $_POST['up_sid'];
+                $dep = $_POST['up_dep'];
+
+                $u_query = "UPDATE user_info SET student_id = '$sid' WHERE user_id='$user_id'";
+                $db->query($u_query);
+                $u_query = "UPDATE user_info SET department = '$dep' WHERE user_id='$user_id'";
+                $db->query($u_query);
+                echo "<script>alert('등록되었습니다.');</script>";
+              }
+
             }
             ?>
 
