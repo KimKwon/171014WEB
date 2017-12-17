@@ -27,9 +27,13 @@
             $query = "INSERT INTO reservation(id, reserve_date, reserve_time, reserve_room_no,reserve_period , purpose, population) VALUES ('$id', '$reserve_date', '$reserve_time' ,$iroom_no, $period ,'$purpose', $ipopulation);";
             $db->query($query);
 
+<<<<<<< HEAD
             //header("Location: reserve.php");
             //header를 사용하면 캐쉬가 꼬인다고 해서 자바로 바꿨습니다.
             echo("<script>location.replace('reserve.php');</script>"); 
+=======
+            header("Location: reserve.php");
+>>>>>>> origin/master
         } catch(PDOException $e) {
             echo $e->getMessage();
         }
