@@ -1,9 +1,13 @@
 #heading{
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-    font-weight: 2;
+    font : 200 50px/1.5em "Helvetica Neue";
+    /* font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif; */
+    /* font-weight: 2; */
     text-align: center;
     margin-top: 2em;
     color: rgb(77, 53, 39);
+}
+.em_modify{
+    padding: 0.5em auto;
 }
 .userinfo{
     color: rgb(77, 53, 39);
@@ -16,6 +20,16 @@
     margin-top: 1em;
     color: rgb(77, 53, 39);
 }
+.mymodi{
+    font : 200 15px/1.5em "Helvetica Neue";
+    color: rgb(77, 53, 39);
+}
+.mymodi a{
+    margin: 2em auto;
+    font : 200 15px/1.5em "Helvetica Neue";
+    
+}
+
 a li{
     margin-top: 3em;
     font-size: 20px;
@@ -30,8 +44,9 @@ li{
     line-height: 1em;
 }
 p{
+    margin: 1.5em auto;
     color: rgb(77, 53, 39);
-    font-size: 30px;
+    font : 200 30px/1.5em "Helvetica Neue";
 }
 nav{
     width: 60%;
@@ -40,6 +55,15 @@ nav{
     height: 40em;
     background-color: rgba(77, 53, 39, 0.4);
 }
-modifyalien{
-    text-align: left;
+.btt{
+    display: block;
+    padding: .8rem;
+    border: none;
+    margin: 1rem auto;
+    font-size: 1rem;
+    background: rgb(73, 73, 73);
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s background;
 }

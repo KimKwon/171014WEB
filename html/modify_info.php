@@ -56,6 +56,7 @@
                    else{
                      $email = $row['user_email'];
                      ?>
+                     <div class="mymodi">
                      <h1 id="heading">내 정보 변경하기</h1>
                      <div class="userinfo">
                        <ul>
@@ -110,7 +111,7 @@
                 <p>이전 비밀번호 : <input type="password" name="pre_pw" value=""></p>
                 <p>새로운 비밀번호 : <input type="password" name="new_pw" value=""></p>
 
-              <input type="submit" name="" value="변경하기">
+              <input class = "btt" type="submit" name="" value="변경하기">
               </div>
               </form>
 
@@ -147,9 +148,9 @@
               ?>
               <form class="em_modify" action="modify_info.php?modify=em&put=true" method="post">
 
-                <p>이전 이메일:<?=$email?></p>
-                <p>새로운 이메일:<input type="text" name="new_em" value=""></p>
-                <input type="submit" name="" value="변경하기">
+                <p>이전 이메일 : <?=$email?></p>
+                <p>새로운 이메일 : <input type="text" name="new_em" value=""></p>
+                <input class = "btt" type="submit" name="" value="변경하기">
               </form>
               <?php
               $new_em = $_POST['new_em'];
@@ -163,9 +164,9 @@
               ?>
               <form class="em_modify" action="modify_info.php?modify=up&put=true" method="post">
 
-                <p>나의 학번:<input type="text" name="up_sid" value=""></p>
-                <p>나의 학과:<input type="text" name="up_dep" value=""></p>
-                <input type="submit" name="" value="업로드하기">
+                <p>나의 학번 : <input type="text" name="up_sid" value=""></p>
+                <p>나의 학과 : <input type="text" name="up_dep" value=""></p>
+                <input class="btt" type="submit" name="" value="업로드하기">
               </form>
               <?php
               if($_GET['put']=='true'){
@@ -181,7 +182,7 @@
 
             }
             ?>
-
+  </div>
         </nav>
 
 
