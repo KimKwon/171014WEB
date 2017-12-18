@@ -169,14 +169,30 @@ nav p{
     margin-bottom: 30px;
     color: #333;
   }
-
+table{
+    margin: 2em auto;
+    font : 200 15px/1.5em "Helvetica Neue";
+}
 thead {
+    margin: 2em auto;
     display: block;
 }
-
-tbody {
+.btt{
     display: block;
-    height: 200px;
+    padding: .8rem;
+    border: none;
+    margin: 1rem auto;
+    font-size: 1.3rem;
+    background: rgb(73, 73, 73);
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s background;
+}
+tbody {
+    margin: 1em auto;
+    display: block;
+    height: 150px;
     overflow: auto;
 }
 

@@ -105,7 +105,7 @@
                                             </tbody>
                                             </table>
                                         <?php } ?>
-                                            <input type="submit" id="delete_reservation" value="예약취소">
+                                            <input class="btt" type="submit" id="delete_reservation" value="예약취소">
                                         </form>
                                     </div>
                                 </li>
