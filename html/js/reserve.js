@@ -36,7 +36,7 @@ window.onload = function() {
     new Ajax.Request("show_time_table.php",{
   //     method: "POST",
       parameters: {date: date },
-      onSuccess: show_time,
+      onSuccess: show_time
     });
 
     $("search").observe('click',function(){
@@ -51,7 +51,7 @@ window.onload = function() {
         new Ajax.Request("show_time_table.php",{
     //     method: "POST",
         parameters: {date: date },
-        onSuccess: show_time,
+        onSuccess: show_time
       });
     });
 
