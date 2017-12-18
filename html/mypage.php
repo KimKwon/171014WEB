@@ -70,7 +70,7 @@
                             </div>
                             <div class = "grid-width">
                                 <li>예약확인
-                                    <div class = "infor" id="style-1">
+                                    <div class = "right_infor">
                                         <?php $query = "SELECT * FROM reservation WHERE id='$user_id'";
                                             $rows = $db->query($query);
                                             if($rows->rowCount() == 0) {
@@ -81,23 +81,28 @@
                                         ?>
                                         <form action="delete_reservation.php" method="post">
                                             <table>
+                                            <thead>
                                             <tr>
-                                            <th></th><th>방번호</th><th>예약날짜</th><th>예약시간</th>
+                                                <th></th><th>방번호</th><th>예약날짜</th><th>예약시간</th>
                                             </tr>
+                                            <thead>
+                                            <tbody id="style-1">
                                         <?php
                                                 $checkbox_name = 1;
                                                 foreach($rows as $row) {
+                                                    $time = $row["reserve_time"];
                                         ?>
                                             <tr>
-                                            <td><input type="checkbox" name="reservation[]" value="<?= $row['reserve_date'] ?>"></td>
-                                            <td><?= $row["reserve_room_no"] ?></td>
-                                            <td><?= $row["reserve_date"] ?></td>
-                                            <td><?= $row["reserve_time"] ?></td>
+                                                <td><input type="checkbox" name="reservation[]" class="squaredFour" value="<?= $row['reserve_date'] ?>"></td>
+                                                <td><?= $row["reserve_room_no"] ?></td>
+                                                <td><?= $row["reserve_date"] ?></td>
+                                                <td><?= $time ?>:00 ~ <?= $time+1 ?>:00</td>
                                             </tr>
                                         <?php   $checkbox_name++;
                                                 } ?>
-                                        <?php } ?>
+                                            </tbody>
                                             </table>
+                                        <?php } ?>
                                             <input type="submit" id="delete_reservation" value="예약취소">
                                         </form>
                                     </div>
