@@ -49,6 +49,9 @@ Server Side
 * * *
 #### My Page
 ![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/mypage.png)
+![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/email.png)
+![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/pw.png)
+![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/sid_dep.png)
 * * *
 #### Reserve Page
 ![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/reserve.png)
