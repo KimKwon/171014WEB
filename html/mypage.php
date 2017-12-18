@@ -92,7 +92,7 @@
                                             <td><input type="checkbox" name="reservation[]" value="<?= $row['reserve_date'] ?>"></td>
                                             <td><?= $row["reserve_room_no"] ?></td>
                                             <td><?= $row["reserve_date"] ?></td>
-                                            <td><?= $row["reserve_time"] ?></td>
+                                            <td><?= $row["reserve_time"] . ":00"?></td>
                                             </tr>
                                         <?php   $checkbox_name++;
                                                 } ?>
