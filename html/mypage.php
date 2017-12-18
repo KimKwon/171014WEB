@@ -80,6 +80,7 @@
                                             } else {
                                         ?>
                                         <form action="delete_reservation.php" method="post">
+<<<<<<< HEAD
                                             <table>
                                             <thead>
                                             <tr>

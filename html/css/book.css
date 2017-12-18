@@ -74,7 +74,6 @@ div, ul, li{
 }
 .bt button {
     display: block;
-    width: 50%;
     padding: .8rem;
     border: none;
     margin: 1rem auto;
@@ -109,6 +108,7 @@ div, ul, li{
     padding-bottom: 14em;
 }
 #Grid p{
+    margin: 10% auto;
     font-size: 0.7em;
 }
 
@@ -147,7 +147,12 @@ div, ul, li{
       margin-bottom: 5%;
     }
   }
-
+.tablemargin{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 1em;
+}
 
   /* -- LEGEND STYLES (NOT PART OF GRID FRAMEWORK) -- */
 
