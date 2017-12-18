@@ -25,6 +25,16 @@ SMASH_ZZIM
    - 1 week
    - can get informatin of existed reservation
 ----------------------------------------------
+
+
+### Using
+Client Side
+=> JavaScript, jQuery
+
+Server Side
+=> PHP
+
+----------------------------------------------
  
 ### Preview
 
@@ -45,7 +55,9 @@ SMASH_ZZIM
 * * *
 #### Choose Date
 ![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/reserve_date.png)
+> Use jQuery Datepicker
 * * *
 #### Reserve Form
 ![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/reserve_form.png)
+> Use BootStrap Modal (jQuery)
 
