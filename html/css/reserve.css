@@ -62,6 +62,7 @@ a:visited{
 /*<<<<<<< HEAD*/
 #table .room_time .reserve,#brown{
     background-image: url('../images/x.png');
+    background-size: 100% 100%;
     background-color: rgb(100, 100, 100);
 /*=======
 #table .room_time .reserve,#brown{
