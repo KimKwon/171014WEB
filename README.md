@@ -1,4 +1,4 @@
-WEB Application TEAM PROJECT
+SMASH_ZZIM
 ============================
 
 ## Team Name: 흔한 대학생들
@@ -18,26 +18,34 @@ WEB Application TEAM PROJECT
    + 배성훈 (2016003563) 
       > Back-End Developer
 
----------------------------------------
+----------------------------------------------
        
 ### Contents
-1. server time on top (visible / invisible)
-2. reservation for SMASH room
-3. SW toto (gambling) 
-   - There is quiz once a day
-   - You can get point when you win !
-   - Rank System 
-   
---------------------------------------- 
+1. reservation for SMASH room
+   - 1 week
+   - can get informatin of existed reservation
+----------------------------------------------
  
 ### Preview
 
 #### Index Page
-![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/index_page.png)
+![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/index.png)
 * * *
 #### Signup Page
-![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/sign_up.png)
+![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/signup.png)
 * * *
 #### Signin Page
-![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/sign_in.png)
+![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/signin.png)
 * * *
+#### My Page
+![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/mypage.png)
+* * *
+#### Reserve Page
+![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/reserve.png)
+* * *
+#### Choose Date
+![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/reserve_date.png)
+* * *
+#### Reserve Form
+![alt text](https://github.com/KimKwon/SMASH_ZZIM/blob/master/preview/reserve_form.png)
+
