@@ -80,7 +80,7 @@
                                             } else {
                                         ?>
                                         <form action="delete_reservation.php" method="post">
-                                            <table>
+                                            <table class ="tablemargin">
                                             <tr>
                                             <th></th><th>방번호</th><th>예약날짜</th><th>예약시간</th>
                                             </tr>
