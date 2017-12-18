@@ -12,20 +12,33 @@
 		$user = $db->query("SELECT user_id, user_pw FROM user_info;");
 
 		$flag_log = false;
-		foreach($user as $us) {
-			if($us["user_id"] == $id && $us["user_pw"] == $pw){
-				$flag_log = true;
-				break;
+		$flag_pw = false;
+		foreach($user as $us){
+			if($us["user_id"] == $id){
+				if($us["user_pw"] == $pw){
+					$flag_log = true;
+					$flag_pw = true;
+					break;
+				}
+				else{
+					$flag_log = true;
+					break;
+				}
 			}
 		}
 
-		if($flag_log) {
+		if($flag_log && $flag_pw) {
 			$_SESSION["id"] = $id;
 			$_SESSION["status"] = "log_in";
-			header("Location: index.php");
-		} else {
-			echo "fail";
+			echo("<script>location.replace('index.php');</script>");
+		} else if($flag_log){
+			echo "<script>window.alert('일치하지 않는 비밀번호입니다.');</script>";
+			echo("<script>location.replace('signin.html');</script>");
+		} else{
+			echo "<script>window.alert('존재하지 않는 아이디입니다.');</script>";
+			echo("<script>location.replace('signin.html');</script>");
 		}
+
 	} catch(PDOException $e){
 		echo $e->getMessage();
 	}

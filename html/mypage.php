@@ -65,9 +65,9 @@
                                     </div>
                                     <div class="bt">
                                         <a href="modify_info.php"><button>회원정보수정</button></a>
-                                    <div>
+                                    </div>
                                 </li>
-                            </div> 
+                            </div>
                             <div class = "grid-width">
                                 <li>예약확인
                                     <div class = "infor">

@@ -48,7 +48,7 @@ span{
 div, ul, li{
     list-style-type: none;
   }
-  
+
   /* -- FLUID GRID STYLES -- */
 
 #Grid{
@@ -62,23 +62,23 @@ div, ul, li{
     margin-top: 2em;
     margin-bottom: 1em;
 }
-.bt button { 
+.bt button {
     display: block;
     width: 50%;
     padding: .8rem;
-    border: none; 
-    margin: 1rem auto; 
+    border: none;
+    margin: 1rem auto;
     font-size: 1.3rem;
     background: rgb(73, 73, 73);
     color: #fff;
-    border-radius: 3px; 
+    border-radius: 3px;
     cursor: pointer;
     transition: .3s background;
   }
 .bt  a{
     text-decoration: none;
 }
-.bt button:hover { 
+.bt button:hover {
    background: rgba(0,0,0,0.5);
 }
 
@@ -101,10 +101,14 @@ div, ul, li{
     font-size: 0.7em;
 }
 
+/*.grid-width{
+    overflow: scroll;
+}*/
+
   /* -- MEDIA QUERIES DEFINING RESPONSIVE LAYOUTS -- */
-  
+
   /* 3 COL */
-  
+
   @media (max-width: 800px){
     #Grid li{
       width: 31%;
@@ -112,9 +116,9 @@ div, ul, li{
       margin-bottom: 3%;
     }
   }
-  
+
   /* 2 COL */
-  
+
   @media (max-width: 600px){
     #Grid li{
       width: 48%;
@@ -122,9 +126,9 @@ div, ul, li{
       margin-bottom: 4%;
     }
   }
-  
+
   /* SINGLE COL */
-  
+
   @media (max-width: 400px){
     #Grid li{
       width: 100%;
@@ -132,17 +136,17 @@ div, ul, li{
       margin-bottom: 5%;
     }
   }
-  
-  
+
+
   /* -- LEGEND STYLES (NOT PART OF GRID FRAMEWORK) -- */
-  
+
   h1{
     font: 600 20px "Helvetica Neue";
     text-align: right;
     text-transform: uppercase;
   }
-  
-  
+
+
 nav p{
     font: 200 15px/1.5em "Helvetica Neue";
     max-width: 400px;

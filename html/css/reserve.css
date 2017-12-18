@@ -1,5 +1,4 @@
 body{
-
 }
 nav{
     height: 65em;
@@ -9,16 +8,23 @@ nav{
 }
 .nav-content-inner{
     padding-right: 2.5%;
-    padding-left: 2.5%
+    padding-left: 2.5%;
 }
 .ulmargin{
-    margin-top: 10em;
+    margin-top: 1em;
 }
 li{
     text-decoration: none;
 }
+a{
+    color:rgb(77, 53, 39);
+}
 a:hover{
-    text-decoration: none;
+    text-decoration-line: none;
+    color: rgb(77, 53, 39);
+}
+a:visited{
+    color: rgb(77, 53, 39);
 }
 #table{
     /* border: 10px solid rgb(77, 53, 39); */
@@ -30,20 +36,22 @@ a:hover{
     float: left;
     margin-bottom: 5em;
 }
-/* .timetable{
-    margin-top: 1em;
-} */
+.timetable{
+    margin-top: 5em;
+    margin-left: 5em;
+    margin-right: 0;
+}
 #datepicker{
     color: black;
 }
 #reser{
-    margin-top: 15em;
+    margin-top: 14em;
 }
 
 #search{
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
   	outline: 0;
-  	background: brown;
+  	background: rgb(134, 103, 103);
 	opacity: 0.75;
   	padding: 8px;
   	box-sizing: border-box;
@@ -51,25 +59,40 @@ a:hover{
 	border-radius: 5px;
 }
 
-#table .room_time .reserve{
+/*<<<<<<< HEAD*/
+#table .room_time .reserve,#brown{
+    background-image: url('../images/x.png');
+    background-color: rgb(100, 100, 100);
+/*=======
+#table .room_time .reserve,#brown{
     background-color: #996633;
+>>>>>>> 4d87726a244fd0e4fbdc6bf841aba3c4547b1c38*/
 }
 
-.room_time td:not(:first-child){
+.room_time td:not(:first-child),#ygreen{
     background-color: yellowgreen;
 
 }
+
+.room_time td:not(:first-child):hover{
+    background-color: #CCFF99;
+}
+
 .room_time td:not(.reserve):not(:first-child){
     cursor: pointer;
 }
 
+/*<<<<<<< HEAD*/
 
+.room_time td:not(first-child){
+/*=======
 .room_time td:first-child){
+>>>>>>> 4d87726a244fd0e4fbdc6bf841aba3c4547b1c38*/
     width: 3em;
 }
 
-#table .room_time .choose{
-    background-color: black;
+#table .room_time .choose,#green{
+    background-color: #336633;
 }
 
 #table tr:first-child{
@@ -77,7 +100,7 @@ a:hover{
 }
 
 .example{
-    margin-top: 5em;
+    margin-top: 10em;
 }
 .example p{
     font-size: 20pt;
@@ -87,6 +110,13 @@ a:hover{
     width: 10em;
     display: inline-block;
 }
+
+.example_box{
+    width: 40px;
+    padding-top: 40px;
+    border: solid 2px white;
+}
+
 input{
     text-align: center;
 }
