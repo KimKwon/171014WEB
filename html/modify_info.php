@@ -21,16 +21,9 @@
                 <a href="index.php">Ordinary Colleage Students</a>
 
                 <li><a href="reserve.php">Reservation</a></li>
-                <li><a href="contactus.html">Contact us</a></li>
-
-                <li><a href="reserve.php">Reservation</a></li>
-
                 <!-- <li><a href="aboutus.html">About us</a></li> -->
                 <li class="dropdown">
-                    Log out
-                    <div class="dropdown-content">
-                        <a href="logout.php">Log out</a>
-                    </div>
+                  <a href="logout.php">Log out</a>
 
                 </li>
             </ul>

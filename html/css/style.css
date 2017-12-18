@@ -138,8 +138,13 @@ header a{
     color: rgb(77, 53, 39);
     text-decoration: none;
     margin-left: 0;
+    margin-top: 2em;
 }
+header a:hover{
+    color: rgb(77, 53, 39);
+    text-decoration: none;
 
+}
 header a:visited{
     color: rgb(77, 53, 39);
 }

@@ -28,10 +28,8 @@
             <a href="index.php">Ordinary Colleage Students</a>
             <li><a href="reserve.php">Reservation</a></li>
             <li class="dropdown">
-                Log out
-                <div class="dropdown-content">
-                    <a href="logout.php">Log Out</a>
-                </div>
+                    <a href="logout.php">Log out</a>
+
 
             </li>
         </ul>
