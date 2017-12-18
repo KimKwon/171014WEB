@@ -163,42 +163,32 @@ function show_time(ajax) {
             $(room_num).appendChild(td);
         }
     }
-    j$('.reserve')[0].on("click",function(events){
+    j$('.reserve').on("click",function(events){
       var a = event.target;
       infoLoader(a);
-      flag=true;
     })
     // alert("이러고 바로 돌아감;");
 }
-
-var g_count;
-var g_room;
-var flag = true;
-
 function infoLoader(elem){
   var count=0;
   var arr = [];
-  if(flag){
-    var tmp = elem.previousSibling;
-    while(tmp = tmp.previousSibling){
-      arr.push(tmp);
-      count++;
-    }
-    if(arr.length<=0){
-      var room = elem.previousSibling.innerHTML;
-    }
-    else{
-        var room = arr[arr.length-1].innerHTML;
-    }
-
-    g_count = count;
-    g_room = room;
-    flag=false;
-  }
   var date = $("datepicker").value;
+  var tmp = elem.previousSibling;
+
+  while(tmp = tmp.previousSibling){
+    arr.push(tmp);
+    count++;
+  }
+  if(arr.length<=0){
+    var room = elem.previousSibling.innerHTML;
+  }
+  else{
+      var room = arr[arr.length-1].innerHTML;
+  }
+
   new Ajax.Request("get_reserve_info.php",{
     method: "post",
-    parameters: {room_no:g_room, room_time:(9+g_count), date:date},
+    parameters: {room_no:room, room_time:(9+count), date:date},
     onSuccess: showInfo
   })
 }
