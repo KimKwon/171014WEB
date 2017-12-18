@@ -80,7 +80,7 @@
                                             } else {
                                         ?>
                                         <form action="delete_reservation.php" method="post">
-<<<<<<< HEAD
+
                                             <table>
                                             <thead>
                                             <tr>
@@ -94,17 +94,11 @@
                                                     $time = $row["reserve_time"];
                                         ?>
                                             <tr>
-<<<<<<< HEAD
-                                            <td><input type="checkbox" name="reservation[]" value="<?= $row['reserve_date'] ?>"></td>
-                                            <td><?= $row["reserve_room_no"] ?></td>
-                                            <td><?= $row["reserve_date"] ?></td>
-                                            <td><?= $row["reserve_time"] . ":00"?></td>
-=======
                                                 <td><input type="checkbox" name="reservation[]" class="squaredFour" value="<?= $row['reserve_date'] ?>"></td>
                                                 <td><?= $row["reserve_room_no"] ?></td>
                                                 <td><?= $row["reserve_date"] ?></td>
                                                 <td><?= $time ?>:00 ~ <?= $time+1 ?>:00</td>
->>>>>>> 82e0461b4a6e56f09ca05efc72f4b589b3c850a8
+
                                             </tr>
                                         <?php   $checkbox_name++;
                                                 } ?>
