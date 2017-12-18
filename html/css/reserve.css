@@ -59,14 +59,14 @@ a:visited{
 	border-radius: 5px;
 }
 
-<<<<<<< HEAD
-#table .room_time .reserve{
-    background-image: url('images/x.png');
+/*<<<<<<< HEAD*/
+#table .room_time .reserve,#brown{
+    background-image: url('../images/x.png');
     background-color: rgb(100, 100, 100);
-=======
+/*=======
 #table .room_time .reserve,#brown{
     background-color: #996633;
->>>>>>> 4d87726a244fd0e4fbdc6bf841aba3c4547b1c38
+>>>>>>> 4d87726a244fd0e4fbdc6bf841aba3c4547b1c38*/
 }
 
 .room_time td:not(:first-child),#ygreen{
@@ -82,12 +82,12 @@ a:visited{
     cursor: pointer;
 }
 
-<<<<<<< HEAD
+/*<<<<<<< HEAD*/
 
 .room_time td:not(first-child){
-=======
+/*=======
 .room_time td:first-child){
->>>>>>> 4d87726a244fd0e4fbdc6bf841aba3c4547b1c38
+>>>>>>> 4d87726a244fd0e4fbdc6bf841aba3c4547b1c38*/
     width: 3em;
 }
 
