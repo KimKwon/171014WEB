@@ -90,7 +90,7 @@
                                         <a href=""><button>예약변경</button></a>
                                     </div>
                                 </li>
-                            </div>    
+                            </div>
                         </ul>
                     </div>
                     <?php
